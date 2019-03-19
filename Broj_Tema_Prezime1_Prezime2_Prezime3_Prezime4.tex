@@ -246,12 +246,24 @@ Ovde pišem tekst.
 \subsection{DoS napadi}
 \label{subsec:DoS}
 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
+https://www.paloaltonetworks.com/cyberpedia/what-is-a-denial-of-service-attack-dos
+
+DoS (Denial-of-Service) napad je radnja napravljena tako da spreči legitimitne korisnike da koriste usluge računara, tj. počinilac (izvršilac) čini mašinu ili mrežni resurs nedostupnim (gasi ih) svojim korisnicima tako što privremeno ili neograničeno ometa usluge hosta povezanog na Internet. DoS napad moze da uključi neovlašćeni pristup jednom ili više kompjuterskih sistema, ali cilj napada nije krađa informacija, nego je cilj da poremeti sposobnost servera da odgovori na korisničke zahteve tako što poplavljuje metu saobraćajem (?? popravi) ili šalje informacije koje aktiviraju razne nezgode. Ometanje normalnog rada kopjuterskih usluga moze da proizvede značajnu stetu. Firma koja se bavi nekom vrstom prodaje putem Interneta može da izgubi posao. Vojsci može da se prekine komunikacija. Vladi ili nekoj neprofitnoj organizaciji može da se desi da ne može da prenese svoju poruku javnosti.
+
+DoS napad je primer "asimetričnog" napada, u kome jedna osoba moze dosta da naškodi velikoj organizaciji. Pošto se terorističke organizacije specijalizuju za asimetrične napade, neki strahuju da će DoS napadi postati važan deo terorističkog oružja.
+
+\subsubsection{DDoS napadi}
+\label{subsubsec:DDoS}
+
+Dodatni tip DoS napada je DDoS (Distributed Denial-of-Service) napad. Glavna razlika je u tome što meta nije napadnuta sa jedne lokacije, već sa više njih odjednom. Do DDoS napada se dolazi kada višestruki sistemi orkestriraju sinhronizovani DoS napad na jednu metu. Podela hostova koji određuju DDoS daje napadaču više prednosti:
+\begin{itemize}
+\item Napadač može iskoristiti veću količinu mašine (popravi) da izvrši ozbiljno razoran napad
+\item Lokacija napada se teško određuje zbog slučajne podele napadačkih sistema
+\item Teže je ugasiti više mašina nego jednu
+\item Pravu napadačku partiju (attacking party - potrazi) je veoma teško identifikovati, jer se oni prikrivaju iza mnogih (uglavnom kompromitovanih) sistema
+\end{itemize}
+
+Mnoge sigurnosne tehnologije su razvile mehanizme za odbranu od mnogih vrsta DoS napada, ali, zbog jedinstvenih karakteristika, DDoS se jos uvek smatra ozbiljnom pretnjom.
 
 \section{Sajber kriminal}
 \label{sec:sajber_kriminal}
@@ -335,7 +347,11 @@ Ovde pišem zaključak.
 \appendix
 \bibliography{seminarski} 
 \bibliographystyle{plain}
-1.\href{https://staff.emu.edu.tr/mobinabeheshti/documents/courses/itec%20317/book-ethics%20for%20the%20information%20age.pdf}{Ethics for the information age}, Michael J. Quinn \\
-2.\url{https://www.trendmicro.com/vinfo/us/security/definition/cybercriminals}\\
-3.\url{https://cybersecurityventures.com/cybercrime-damages-6-trillion-by-2021/} 
+\begin{enumerate}
+\item \href{https://staff.emu.edu.tr/mobinabeheshti/documents/courses/itec%20317/book-ethics%20for%20the%20information%20age.pdf}{Ethics for the information age}, Michael J. Quinn
+\item \url{https://www.trendmicro.com/vinfo/us/security/definition/cybercriminals}
+\item \url{https://cybersecurityventures.com/cybercrime-damages-6-trillion-by-2021/} 
+\item \url{https://www.paloaltonetworks.com/cyberpedia/what-is-a-denial-of-service-attack-dos}
+\end{enumerate}
+
 \end{document}
