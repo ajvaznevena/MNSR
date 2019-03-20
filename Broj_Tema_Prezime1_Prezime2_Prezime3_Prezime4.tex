@@ -109,18 +109,21 @@ U ovom tekstu je ukratko prikazana osnovna forma seminarskog rada. Obratite paž
 % Da bi se ispitivala ispravost softvera, najpre je potrebno precizno definisati njegovo ponašanje \cite{laski2009software}. 
 %\end{primer}
 
-Reference koje se koriste u ovom tekstu zadate su u datoteci {\em seminarski.bib}. Prevođenje u pdf format u Linux okruženju može se uraditi na sledeći način:
-\begin{verbatim}
-pdflatex TemaImePrezime.tex 
-bibtex TemaImePrezime.aux 
-pdflatex TemaImePrezime.tex 
-pdflatex TemaImePrezime.tex 
-\end{verbatim}
-Prvo latexovanje je neophodno da bi se generisao {\em .aux} fajl. {\em bibtex} proizvodi odgovarajući {\em .bbl} fajl koji se koristi za generisanje literature. 
-Potrebna su dva prolaza (dva puta pdflatex) da bi se reference ubacile u tekst (tj da ne bi ostali znakovi pitanja umesto referenci). Dodavanjem novih referenci potrebno je ponoviti ceo postupak.  
+%Reference koje se koriste u ovom tekstu zadate su u datoteci {\em seminarski.bib}. Prevođenje u pdf format u Linux okruženju može se uraditi na sledeći način:
+%\begin{verbatim}
+%pdflatex TemaImePrezime.tex 
+%bibtex TemaImePrezime.aux 
+%pdflatex TemaImePrezime.tex 
+%pdflatex TemaImePrezime.tex 
+%\end{verbatim}
+%Prvo latexovanje je neophodno da bi se generisao {\em .aux} fajl. {\em bibtex} proizvodi odgovarajući %{\em .bbl} fajl koji se koristi za generisanje literature. 
+%Potrebna su dva prolaza (dva puta pdflatex) da bi se reference ubacile u tekst (tj da ne bi ostali znakovi pitanja umesto referenci). Dodavanjem novih referenci potrebno je ponoviti ceo postupak.  
 
 
-
+Napomena: U uvodnom delu treba imati više od dva citata. Milena je na predavanju rekla da treba što više citata da se ubacuje. Postoji dva tipa citata koje je preporuceno koristiti:\\
+1. gde se može naći detaljnije o toj temi\\
+2. objašnjenja. Tipa odakle tvrdim da je to važno, koje istraživanje je ivršeno, pa to iznosim kao činjenicu...\\
+Ovde \cite{knjiga} citiram knjigu po kojoj smo izabrali poglavlja
 
 
 
@@ -201,8 +204,8 @@ Potrebna su dva prolaza (dva puta pdflatex) da bi se reference ubacile u tekst (
 \section{Pojam sajber kriminala}
 \label{pojam}
 
-Visokotehnološki ili sajber kriminal (eng. {\em cyber criminal}) predstavlja moderni vid kriminala, tačnije, putem računara. Sajber kriminalci su osobe ili grupe ljudi koji koriste tehnologiju kako bi izveli zlonamerne aktivnosti putem mreže sa ciljem da ukradu osetljive podatke neke firme, lične informacije ili da profitiraju.
-\\Zakoni koji se odnose na ovu vrstu kriminala se dopunjuju i razvijaju u raznim zemljama širom sveta. Veoma je teško pronaći i uhapsiti zločinca u sajber kriminalu jer su dokazi često nepostojeći.
+Visokotehnološki ili sajber kriminal (eng. {\em cyber criminal}) predstavlja moderni vid kriminala, tačnije, putem računara. Sajber kriminalci su osobe ili grupe ljudi koji koriste tehnologiju kako bi izveli zlonamerne aktivnosti putem mreže sa ciljem da ukradu osetljive podatke neke firme, lične informacije ili da profitiraju \cite{sajber}.
+\\Zakoni koji se odnose na ovu vrstu kriminala se dopunjuju i razvijaju u zemljama širom sveta. Najizloženije zemlje za sajber napade su one koje su u razvoju. U takvim zemljama je zakon o ovoj oblasti slabo definisan, a u nekim ni ne postoji. Takođe, veoma je teško pronaći i uhapsiti zločinca u sajber kriminalu jer su dokazi često nepostojeći.
 
 Treba napraviti razliku između sajber kriminalca i hakera. Sajber kriminalci sa lošim namerama vrše upad u računare, dok hakeri traže inovativne načine da koriste sistem, bili ti načini loši ili dobri.
 \\
@@ -342,13 +345,11 @@ Ovde pišem zaključak.
 
  
 \addcontentsline{toc}{section}{Literatura}
-%TODO srediti literaturu kad prikupimo sve. Ovu knjigu sam htela da napravimo da moze da se klikne na tekst i otvori se link ka pdf verziji knjige. Ali je problem sto link ima '%' u sebi, sto predstavlja komentar. Valjda sam to sredila, treba proveriti
 
 \appendix
 \bibliography{seminarski} 
 \bibliographystyle{plain}
 \begin{enumerate}
-\item \href{https://staff.emu.edu.tr/mobinabeheshti/documents/courses/itec%20317/book-ethics%20for%20the%20information%20age.pdf}{Ethics for the information age}, Michael J. Quinn
 \item \url{https://www.trendmicro.com/vinfo/us/security/definition/cybercriminals}
 \item \url{https://cybersecurityventures.com/cybercrime-damages-6-trillion-by-2021/} 
 \item \url{https://www.paloaltonetworks.com/cyberpedia/what-is-a-denial-of-service-attack-dos}
