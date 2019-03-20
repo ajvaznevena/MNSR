@@ -236,15 +236,74 @@ Prema jednom istraživanju, bilo je najmanje 67.000 “phishing” napada širom
 je povećanje “phishing” napada na kineske e-trgovine, što ukazuje na povećavanje važnosti kineske ekonomije. U 2018 godini
 APWG (Anti-Phishing Working Group) je otkrio 785 920 sajtova za “phishing”.
 
-\subsection{SQL}
+\subsection{SQL injekcija}
 \label{subsec:sql}
 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst.
+SQL injekcija jeste umetanje dela ili celog SQL upita obično preko polja za unos na veb stranici. Ukoliko ovako nešto uspe može se pristupiti osetljivim podacima iz baze, mogu se modifikovati podaci, izvršiti administrativne operacije nad bazom itd. Pogledajmo primer ispod koji kreira SELECT upit koji dodaje sadržaj promenljive(txtUserId) na SELECT string. Sadržaj promenljive je sadržaj polja za unos korisničkog id-a (getRequestString).
+\begin{verbatim}
+txtUserId = getRequestString("UserId");
+txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
+\end{verbatim}
+
+\paragraph{}
+Jedan od načina upotrebe SQL injekcije zasniva se na činjenici da je ,,1=1‘‘ uvek istinito. Zamislimo da je korisnik u polju za unos uneo ,,105 OR 1=1‘‘ . Tada bi SQL upit iz prethodnog primera izgledao ovako:
+
+\begin{verbatim}
+SELECT * FROM Users WHERE UserId = 105 OR 1=1;
+\end{verbatim}
+
+
+\noindent Ovakav upit vratiće sve redove ,,Users‘‘ tabele, jer je ,,1=1‘‘ uvek istinito. Šta ako tabela ,,Users‘‘ sadrzi imena i šifre? Haker moze pristupiti svim imenima i šiframa iz baze jednostavno dodavajuci ,,105 OR 1=1‘‘ u polje za unos korisničkog imena.
+
+\paragraph{}
+ ,, \texttt{"}\texttt{"}=\texttt{"}\texttt{"} ‘‘ je uvek istinito i ovo je još jedan način upotrebe SQL injekcije. Recimo da imamo sledeći deo koda:
+\begin{verbatim}
+uName = getRequestString("username");
+uPass = getRequestString("userpassword");
+
+sql = 'SELECT * FROM Users WHERE Name ="' + uName + '" AND 
+								Pass ="' + uPass + '"'
+\end{verbatim}
+
+\noindent Haker jednostavno može pristupiti korisničkim imenima i šiframa u bazi unoseći ,, \texttt{"} OR \texttt{"}\texttt{"}=\texttt{"} ‘‘ u polje za šifru ili u polje za korisničko ime. Kod na serveru ce kreirati ispravan SQL upit:
+
+\begin{verbatim}
+SELECT * FROM Users WHERE Name ="" OR ""="" AND Pass ="" OR ""="";
+\end{verbatim}
+
+\noindent SQL upit koji se nalazi iznad vratiće sve redove iz tabele ,,Users‘‘, jer je ,, OR \texttt{"}\texttt{"}=\texttt{"}\texttt{"} ‘‘ uvek istinito. 
+
+\paragraph{}
+Mnoge baze podrzavaju grupu SQL upita razdvojene ,, ; ‘‘. SQL upit ispod vratiće sve redove iz tabele ,,Users‘‘, i potom obrisati ,,Suppliers‘‘ tabelu.
+
+\begin{verbatim}
+SELECT * FROM Users; DROP TABLE Suppliers
+\end{verbatim}
+
+\noindent Pogledajmo sledeći primer:
+
+\begin{verbatim}
+txtUserId = getRequestString("UserId");
+txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
+\end{verbatim}
+
+\noindent Ukoliko bi korisnik u polje za korisnički id uneo ,,105; DROP TABLE Suppliers‘‘ SQL upit koji se nalazi iznad izgledao bi ovako:
+
+\begin{verbatim}
+SELECT * FROM Users WHERE UserId = 105; DROP TABLE Suppliers; 
+\end{verbatim}
+
+\paragraph{}
+Kako se zaštititi od ovakvih napada? Tako što cemo koristiti SQL parametre. SQL parametri su vredosti koje su dodate SQL upitu u vreme izvršavanja na kontrolisan način. 
+
+\begin{verbatim}
+txtUserId = getRequestString("UserId");
+txtSQL = "SELECT * FROM Users WHERE UserId = @0";
+db.Execute(txtSQL,txtUserId);
+\end{verbatim}
+
+\noindent Primer iznad je deo koda u ASP.NET-u u kome se koriste parametri. Parametri su predstavljeni znakom @. SQL mehanizam proverava parametre kako bi se uverio da su ispravni i da se tretiraju bukvalno a ne kao deo SQL-a koji se izvršava.
+
 
 \subsection{DoS napadi}
 \label{subsec:DoS}
@@ -353,6 +412,7 @@ Ovde pišem zaključak.
 \item \url{https://www.trendmicro.com/vinfo/us/security/definition/cybercriminals}
 \item \url{https://cybersecurityventures.com/cybercrime-damages-6-trillion-by-2021/} 
 \item \url{https://www.paloaltonetworks.com/cyberpedia/what-is-a-denial-of-service-attack-dos}
+\item \url{https://www.w3schools.com/sql/sql_injection.asp}
 \end{enumerate}
 
 \end{document}
