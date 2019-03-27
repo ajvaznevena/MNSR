@@ -321,25 +321,42 @@ Dodatni tip DoS napada je DDoS (Distributed Denial-of-Service) napad. Glavna raz
 \item Pravu napadačku partiju (attacking party - potrazi) je veoma teško identifikovati, jer se oni prikrivaju iza mnogih (uglavnom kompromitovanih) sistema
 \end{itemize}
 
-Mnoge sigurnosne tehnologije su razvile mehanizme za odbranu od mnogih vrsta DoS napada, ali, zbog jedinstvenih karakteristika, DDoS se jos uvek smatra ozbiljnom pretnjom.
+Mnoge sigurnosne tehnologije su razvile mehanizme za odbranu od mnogih vrsta DoS napada, ali, zbog jedinstvenih karakteristika, DDoS se još uvek smatra ozbiljnom pretnjom.
 
 \section{Sajber kriminal}
 \label{sec:sajber_kriminal}
 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
+http://docshare04.docshare.tips/files/23471/234718626.pdf \\
+deo Advancement of  Computer and Network Attack and Exploitation Methodologies (163-164)
+
+
+Glavni trend koji pokreće evoluciju računarskih napada i ekspoatacija uključuje motiv rasta profita zasnovanog na zlonamernom kodu (malware, malicious code). Neki napadači prodaju prilagodjeni zlonamerni kod za kontrolu mašina žrtava kupcu koji je najviše ponudio. Mogu iznajmiti gomile zaraženih sistema, koji su korisni za isporuku nepoželjne pošte (spamova), phishing shema, DoS napada ili za krađu identiteta. Špijunske kompanije i preterano agresivni oglašivači (popravi) kupuju takvu vrstu koda kako bi se ubacili (infiltrirali) i kontrolisali žrtvine mašine. Jedna zaražena mašina na kojoj iskašu reklame i prilagođavaju se rezultati pretrage može da košta svega \$1 mesešno. Ključni logger (???) na zaraženoj mašini može da pomogne napadaču da skupi brojeve kreditnih kartica i ukrade \$1,000 ili više od žrtve pre nego što se otkrije prevara. Ako kontroliše 10,000 mašina, napadač može solidno da profitira od sajber kriminala. Organizovane kriminalne grupe mogu okupiti grupu takvih napadaša kako bi stvorile biznis, što izaziva porast industrije zlonamernog koda. Krajem devedesetih godina proslog veka, vecinu malvera su pravili entuzijasti, ali danas su profesionalni napadaši monetizovali svoj malver, njihovi profitni centri daju sredstva koja se mogu koristiti za istraživanje i razvoj kako bi se stvorio snažan zlonameran softver i ometali poslovni modeli, kao i finansirali drugi zločini. 
+
+Kada kriminalci budu otkrili pouzdan nacin za zaradu novca na ovoj grani kriminala, broj incidenata ovog tipa će se neizbežno povecati. Kompjuterski napadači su osmislili različite poslovne modele koji su niskog rizika, tako da je verovatnoca da će napadač biti uhvacen ukoliko pazljživo skriva svoje tragove mala. Tako mogu da se zarade stotine hiljada ili čak milioni dolara.
+
+Faktor koji podstiče rast sajber napada je bot (skracenica od reci \textit{robot}) softver. Ovaj softver dozvoljava napadaču da kontroliše neki sistem širom Interneta. Jedan napadač ili grupa napadača moze da postavi ogromne botnetove (grupe zaraženih mašina) širom sveta. Mašine koje kontrolišu botovi omogućavaju napadačoma da postavljaju virtualne superračunare koji mogu da predstavljaju rivale nacionalnoj kompjuterskoj snazi. Mogu da koriste te resurse da bi stvorili ogromnu poplavu, razbili (crack) kripto ključeve ili lozinke, ili da bi istražili osetljive finansijske podatke koji se koriste za krađu identiteta.
+
+Botovi i ostali alati koji se koriste za napade su postali veoma modularni, svaki modul se sastoji iz softverskih komponenti koje omogućavaju napadačima da brzo menjaju funkcionalnost kako bi pokrenuli nove vrste napada. Obični botovi danas sadrže 50 do 100 različitih funkcionalnih modula; napadač može da ugasi ili odrstani module koji nisu potrebni za dati napad, dok lako integriše nove karakteristike (funkcije) koda. Drugi modularni napadački alati sadrže ekspoatacione okvire (exploitation  frameworks) koji prave pakovani ekspoatacioni kod koji može da se ubaci (infiltrira) u ciljnu mašinu koja je ranjiva (zato pto je pogrepno konfigurisana ili nepovezana).
+
+Ubrzavajući evoluciju, napadači se sve više oslanjaju na bot kod koji se sam preobražava, dinamički stvarajući funkcionalno ekvivalentnu verziju sa različitim skupovima osnovnog koda. Takav polimorfni kod pomaze napadačima da izbegnu alate za detekciju koje antivirusi i antispyware softveri\footnote{Vrsta programa napravljena za sprečavanje i otkrivanje neželjenih instalacija špijunskih softvera i uklanjanje tih programa ukoliko su instalirani.} danas koriste. Ovaj dinamički samopodešavajući kod je teze filtrirati, s obzirom da konstantno modulira (menja) svoj osnovi softver. Ova "pokretna meta" koda otežava analizu od stane branilaca. Polimorfni kod podstiče ciljeve napadača jer napadači imaju dužu kontrolu nad botnetom izbegavajući filtriranje i detekcije, tako da mogu što više novca da zarade od zaraženih sistema.
 
 \subsection{Primeri kriminalnih napada}
 \label{subsec:primeri_krimi_napada}
 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
-Ovde pišem tekst. 
+\begin{description}
+\item[DŽENSON DŽJEMS ANČETA] 2004. i 2005. je Dženson Džejms Ančeta, radnik u jednom Internet kafeu, napravio mrežu od oko 400,000 botova, uključujući i računare kojima upravlja Ministarstvo odbrane SAD-a. Softveri za reklame (adware companies), spameri i ostali su platili Ančeti da koriste te računare. Nakon što ga je FBI uhapsio, Ančeta se izjasnio krivim za razne optužbe, uključujući prekršavanje zakona o zlostavljanju računara kao i CAN-SPAM zakon (Computer Fraud Abuse Act and the CAN-SPAM Act). U maju 2005., federalni sudija je osudio Ančetu na 57 meseci zatvora i tražio od njega da plati \$15,000 američkoj vladi zbog napada na Odeljenje za odbranu. Zbog njegovih ilegalinih aktivnosti, vlada je Ančeti oduzela njegov 1993 BMW, više od \$60,000 u kešu, kao i njegovu računarsku opremu.
+
+\item[PHARMAMASTER] Izraelska kompanija Blue Security je napravila sistem za zastrašivanje spamova (popravi !!!) kako bi pomogla ljudima koji ne žele da primaju spampve. Blue Security je prodavala svoj sistem preduzećima, dok su individualci mogli besplatno da štite svoje računare. Oko pola miliona ljudi se prijavilo za ovu besplatni uslugu. Korisnici su na svojim računarima učitali bot po nazivu Blue Frog koji je integrisan sa Yahoo! Mail-om, Gmail-om, Hotmail-om, i provera da li su dolazeći mejlovi spamovi. Kada naiđe na spam poruku, bot kontaktira Blue Security server kako bi otkrio izvor tog mejla i zatim spameru salje opt-out poruku (da prekine da salje takvu vrstu mejlova).
+
+Spameri koji neselektivno salju mejlove na milione adresa su počeli da primaju stotine hiljada opt-out poruka, koje su ometale njihove operacije. Šest najboljih svetskih spamera se dogovorilo da koristi softver za filtriranje koji je razvio Blue Security kako bi odstranili Blue Frog korisnike sa svojih mejl lista.
+
+Jedan spamer, čiji je nadimak bio PharmaMaster, se nije povukao. On je pretio Blue Frog korisnicima porukama kao sto je na primer sledeća : "Nažalost, zbog taktika koje koristi Blue Security, primaćete ovu poruku ili druge besmislene spamove 20-40 puta vise nego inače". On je ispoštovao svoje pretnje, pa je 1. maja 2006. počeo da šalje Blue Frog korisnicima 10 do 20 puta više spamova nego sto obično prime.
+
+Narednog dana je počeo da napada sam Blue Security. Lansirao je DDoS napad sa desetina hiljada botova ciljajući Blue Security servere. Ogromna bujica (torrent) dolaznih poruka je onemogucila Blue Frog uslugu. Kasnije su se DDoS napadi fokusirali na druge kompanije koje pružaju Internet usluge Blue Security-u. Na kraju su napadi ciljali preduzeća koja su placala usluge Blue Seciruty-u. Kada je Blue Security shvatio da ne može da zaštiti svoje klijente od DDoS napada i mejlova sa virusima, nevoljno je prekinuo svoju uslugu.
+
+\item[AVALANCHE GANG] Avalanche Gang je ime dato kriminalnom preduzeću koje je odgovorno za više phishing napada nego bilo koja druga organizacija. Anti-Phishing Working Group (APWG) je procenila da je Avalanche Gang odgovoran za dve trećine svih phishing napada lansiranih u drugoj polovini 2009. U drugoj polovini 2010., APWG je zapazila da je Avalanche skoro prestao sa phishing napadima, vodeci APWG da spekuliše da je Avalanche menjao strategije i fokusirao se na širenje neželjene pošte koja ljude uvlači u preuzimanje Zeus trojanskog konja.
+\item[ALBERT GONZALEZ] Albert Gonzalez je 2010. osuđen na 20 godina zatvora nakon što se izjasnio krivim za koriscenje SQL injekcija kako bi ukrao više od 130 miliona brojeva kreditnih i debitnih kartica. Neki od tih brojeva su prodati onlajn, što je dovelo do neovlašćenih kupovina i povlačenja banaka. Ciljevi napada su bili Heartland Payment Systems,  7-Eleven,  Hannaford Brothers Supermarkets,  TJX,  DSW,  Barnes \& Noble, OfficeMax, and the Dave \& Buster lanci restorana. Većina brojeva je ukradena od firme Heartland Payment Systems, procenjujući gubitak na \$130 miliona.
+\end{description}
 
 \section{Sajber napadi}
 \label{sec:sajber_napadi}
@@ -426,6 +443,7 @@ Ovde pišem zaključak.
 \item \url{https://www.paloaltonetworks.com/cyberpedia/what-is-a-denial-of-service-attack-dos}
 \item \url{https://www.w3schools.com/sql/sql_injection.asp}
 \item \url{https://www.csoonline.com/article/2130877/the-biggest-data-breaches-of-the-21st-century.html}
+\item \url{http://docshare04.docshare.tips/files/23471/234718626.pdf} str 163-164
 \end{enumerate}
 
 \end{document}
