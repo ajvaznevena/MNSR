@@ -6,6 +6,7 @@
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
 \usepackage[utf8]{inputenc} % make weird characters work
 \usepackage{graphicx}
+\usepackage{wrapfig}
 
 \usepackage[english,serbian]{babel}
 %\usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
@@ -71,6 +72,7 @@ Internet je jedno od najmoćnijih oružja današnjice koji nudi mnoge pogodnosti
 \label{sec:uvod}
 
 U ovom radu ćemo se na početku upoznati sa pojmom sajber kriminala\cite{kriminal}, kao i problemom rasprostranjenosti sajber napada. Dalje će biti prikazane 3 najčešće vrste napada - fišing, SQL injekcija i DoS. Sajber kriminal brzo napreduje, što prouzrokuje razvoj i nastanak novih vrsta napada. U petom poglavlju, koje se odnosi na primere napada, biće prikazani problemi najvećih svetskih kompanija i država, i kako su se one suočavale sa tim. Nakon ovoga, pozabavićemo se temom glasanja putem Interneta.
+
 
 %Broj naslova i podnaslova je proizvoljan. Neophodni su samo Uvod i Zaključak. Na poglavlja unutar teksta referisati se po potrebi. 
 %\begin{primer}
@@ -245,7 +247,7 @@ db.Execute(txtSQL,txtUserId);
 \subsection{DoS napadi}
 \label{subsec:DoS}
 
-DoS (eng. {\em Denial-of-Service}) napad je radnja koja sprečava legitimitne korisnike da koriste usluge računara, tj. napadač utiče da mašina ili mrežni resurs  budu nedostupni korisnicima tako što privremeno ili neograničeno ometa usluge hosta\footnote{Računar koji čuva veb sajt ili druge podatke kojima se može pristupiti preko Interneta ili neke druge mreže (izvor - Oxford Dictionaries)} povezanog na Internet. DoS napad moze da uključi neovlašćeni pristup jednom ili više računarskih sistema, ali cilj napada nije krađa informacija, nego remećenje sposobnosti servera da odgovori na korisničke zahteve tako što zatrpava metu mrežnim saobraćajem ili šalje informacije koje aktiviraju razne nezgode. Ometanje normalnog rada računarskih usluga može da napravi veliku štetu. Firma koja se bavi nekom vrstom prodaje putem Interneta može da izgubi posao, vojsci može da se prekine komunikacija, Vladi ili nekoj neprofitnoj organizaciji može da se desi da ne može da prenese svoju poruku javnosti.
+DoS (eng. {\em Denial-of-Service}) napad je radnja koja sprečava legitimitne korisnike da koriste usluge računara, tj. napadač utiče da mašina ili mrežni resurs  budu nedostupni korisnicima tako što privremeno ili neograničeno ometa usluge hosta\footnote{Računar koji čuva veb sajt ili druge podatke kojima se može pristupiti preko Interneta ili neke druge mreže (izvor - \href{https://en.oxforddictionaries.com/definition/host}{Oxford Dictionaries})} povezanog na Internet. DoS napad moze da uključi neovlašćeni pristup jednom ili više računarskih sistema, ali cilj napada nije krađa informacija, nego remećenje sposobnosti servera da odgovori na korisničke zahteve tako što zatrpava metu mrežnim saobraćajem ili šalje informacije koje aktiviraju razne nezgode. Ometanje normalnog rada računarskih usluga može da napravi veliku štetu. Firma koja se bavi nekom vrstom prodaje putem Interneta može da izgubi posao, vojsci može da se prekine komunikacija, Vladi ili nekoj neprofitnoj organizaciji može da se desi da ne može da prenese svoju poruku javnosti.
 
 DoS napad je primer ,,asimetričnog‘‘ napada, tj. napada u kome jedna osoba može dosta da naškodi velikoj organizaciji. Pošto se terorističke organizacije specijalizuju za asimetrične napade, neki strahuju da će DoS napadi postati važan deo terorističkog oružja.
 
@@ -283,7 +285,16 @@ Ubrzavajući evoluciju, napadači se sve više oslanjaju na bot kod koji se sam 
 \section{Sajber napadi}
 \label{sec:sajber_napadi}
 
-Sajber napad predstavlja napad od računara do računara koji povređuje poverljivost, integritet i informacije koje se nalaze na napdanutom računaru \cite{knjiga}. U ovom poglavlju ćemo se susresti sa nekim primerima napada na države i velike svetske gigante u poslednjih deset godina. 
+Sajber napad predstavlja napad od računara do računara koji povređuje poverljivost, integritet i informacije koje se nalaze na napdanutom računaru \cite{knjiga}. U ovom poglavlju ćemo se susresti sa nekim primerima napada na države i velike svetske gigante u poslednjih deset godina.
+
+\clearpage
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.48\textwidth]{napad.png}
+\caption{Sajber napad}
+\end{center}
+\end{figure}
 
 \subsection{Primeri samostalnih napada}
 \label{subsec:primeri_samo_napada}
@@ -299,7 +310,8 @@ Jedan spamer, čiji je nadimak bio PharmaMaster, nije se povukao. On je pretio B
 
 Narednog dana je počeo da napada sam Blue Security. Lansirao je DDoS napad sa desetina hiljada botova ciljajući Blue Security servere. Ogromna količina dolaznih poruka je onemogucila Blue Frog uslugu. Kasnije su se DDoS napadi fokusirali na druge kompanije koje pružaju internet usluge Blue Security-u. Na kraju su napadi ciljali preduzeća koja su placala usluge Blue Seciruty-u. Kada je Blue Security shvatio da ne može da zaštiti svoje klijente od DDoS napada i mejlova sa virusima, nevoljno je prekinuo svoju uslugu.
 
-\item[AVALANCHE GANG] Avalanche Gang je ime dato kriminalnom preduzeću koje je odgovorno za više fišing napada nego bilo koja druga organizacija. APWG\cite{apwg} je procenila da je Avalanche Gang odgovoran za dve trećine svih phishing napada lansiranih u drugoj polovini 2009. U drugoj polovini 2010., APWG je zapazila da je Avalanche skoro prestao sa fišing napadima, vodeći APWG da spekuliše da je Avalanche menjao strategije i fokusirao se na širenje neželjene pošte koja ljude uvlači u preuzimanje Zeus trojanca.
+%\item[AVALANCHE GANG] Avalanche Gang je ime dato kriminalnom preduzeću koje je odgovorno za više fišing napada nego bilo koja druga organizacija. APWG\cite{apwg} je procenila da je Avalanche Gang odgovoran za dve trećine svih phishing napada lansiranih u drugoj polovini 2009. U drugoj polovini 2010., APWG je zapazila da je Avalanche skoro prestao sa fišing napadima, vodeći APWG da spekuliše da je Avalanche menjao strategije i fokusirao se na širenje neželjene pošte koja ljude uvlači u preuzimanje Zeus trojanca.
+
 \item[ALBERT GONZALEZ] Albert Gonzalez je 2010. osuđen na 20 godina zatvora nakon što se izjasnio krivim za koriscenje SQL injekcija kako bi ukrao više od 130 miliona brojeva kreditnih i debitnih kartica. Neki od tih brojeva su prodati onlajn, što je dovelo do neovlašćenih kupovina i povlačenja banaka. Ciljevi napada su bili Heartland Payment Systems,  7-Eleven,  Hannaford Brothers Supermarkets,  TJX,  DSW,  Barnes \& Noble, OfficeMax, i Dave \& Buster lanci restorana. Većina brojeva je ukradena od firme Heartland Payment Systems, procenjujući gubitak na \$130 miliona.
 \end{description}
 
@@ -389,7 +401,7 @@ U ovom poglavlju biće vršena diskusija o glasanju putem Interneta na osnovu pr
 \section{Zaključak}
 \label{sec:zakljucak}
 
-Iz svega priloženog, korišćenje Interenta bi trebalo da bude odgovono. Videli smo da ni ozbiljne organizacije nisu uspele da se odbrane od zlonamernih napada. Stoga, svako od nas treba biti svestan ozbiljnosti napada kojim može biti izložen i oprezan prilikom ostavljanja ličnih i poverljivih informacija.  
+Iz svega priloženog, korišćenje Interenta bi trebalo da bude odgovono. Videli smo da ni ozbiljne organizacije nisu uspele da se odbrane od zlonamernih napada. Stoga, svako od nas treba biti svestan ozbiljnosti napada kojim može biti izložen i oprezan prilikom ostavljanja ličnih i poverljivih informacija.
  
 \addcontentsline{toc}{section}{Literatura}
 
