@@ -163,21 +163,29 @@ U mnogim zemljama, Internet odvija ključnu ulogu u svakodnevnom životu ljudi. 
 \subsection{Fišing (eng. {\em phishing})}
 \label{subsec:phishing}
 
-US-CERT (The United States Computer Emergency Readiness Team)
-https://www.us-cert.gov/
-
-
-http://www.phishing.org/
-
-Fišing je vrsta društvenog inženjeringa gde se napadač pomoću elektronske pošte ili zlonamernih veb sajtova lažno predstavlja kao pouzdana organizacija ili kompanija kako bi prikupio lične podatke od pojedinca ili kompanije.[] Engleski termin {\em  phishing} je prvi put koriščen 1996. a nazvan je po pecanju jer mejlovi služe kao mamac kojim se “pecaju” ljudi da daju svoje privatne informacije.[] “Ph” umesto “f” u zapisu reči je aluzija na termin phreaks koji označava ljude koji su eksploatisali telekomunikacije, a neki ih smatraju prvim hakerima.[] 
-Napadi fišinga se često sastoje od slanja korisnicima imejlova koji izgledaju kao da su iz bankarske ili finansijske institucije ili veb servisa preko kojeg pojedinac ima račun. Cilj fišinga je da prevari primaoca da da svoje podatke za prijavljivanje ili druge osetljive informacije. 
-\\Na primer, napadač može da pošalje milione mejlova sa botnet-a (dodaj fusnotu). Poruke obaveštavaju primaoce da je njihov nalog za elektronsku trgovinu bio kompromitovan i upućuju ih na veb lokaciju gde bi rešili problem. Korisnici koji kliknu na link dođu do veb stranice koja je napravljena tako da podseća na originalni sajt za elektronsku trgovinu. Kada se nađu na sajtu, od njih se traži korisničko ime, lozinka i druge privatne informacije. Te informacije mogu da se iskoriste za krađu identiteta.
+Fišing je vrsta društvenog inženjeringa (eng. {\em social engineering})\footnote{Obmana kojom se manipuliše ljudima da daju poverljive informacije.} gde se napadač pomoću elektronske pošte ili zlonamernih veb sajtova lažno predstavlja kao pouzdana organizacija ili kompanija kako bi prikupio lične podatke od pojedinca ili kompanije \cite{phishing_us_cert}. Engleski termin {\em  phishing} je prvi put koriščen 1996. a nazvan je po pecanju jer mejlovi služe kao mamac kojim se ljudi navode da daju svoje podatke. ,,Ph‘‘ umesto ,,f‘‘ u zapisu reči je aluzija na termin {\em phreaks} koji označava ljude koji su eksploatisali telekomunikacije, a neki ih smatraju i prvim hakerima \cite{phishing_org}.
+Napadi fišinga se često sastoje od slanja korisnicima mejlova koji izgledaju kao da su iz bankarske ili finansijske institucije ili veb servisa preko kojeg pojedinac ima račun. Cilj fišinga je da prevari primaoca da da svoje podatke za prijavljivanje ili druge osetljive informacije. 
+Na primer, napadač može da pošalje milione mejlova sa botnet-a\footnote{Mreža privatnih računara, zaraženih zlonamernim softverom, koji se kontrolišu kao grupa bez znanja vlasnika, npr. za slanje spama.}. Poruke obaveštavaju primaoce da je njihov nalog za elektronsku trgovinu bio kompromitovan i upućuju ih na veb lokaciju gde bi rešili problem. Korisnici koji kliknu na link dođu do veb stranice koja je napravljena tako da podseća na originalni sajt za elektronsku trgovinu. Kada se nađu na sajtu, od njih se traži korisničko ime, lozinka i druge privatne informacije. Te informacije mogu da se iskoriste za krađu identiteta.
 
 Ciljano orijentisan fišing (eng. {\em spear phishing}) je varijanta fišinga u kojoj napadač bira adrese elektonske pošte tako da cilja jednog ili određenu grupu primalaca. Na primer, napadač može ciljati starije osobe kao osobe koje se smatraju lakovernijima ili članove grupa koji imaju pristup vrednim informacijama. Ciljano orijentisan fišing može biti veoma delotvoran jer omogućava napadaču da uobliči napad tako da žrtva zbog hitnosti ili poverenja određenim osobama bude manje oprezna. Za ovo je potrebno da napadač prikupi lične podatke o žrtvi, kao što su imena prijatelja, poslodavac, rodni grad, lokacije koje posećuje, šta je nedavno kupila na mreži itd.
 Na primer, napadač može da pošalje mejl ka nekoliko ljudi koji izgleda kao da je od njihovog direktora, gde im je poslat poziv na sastanak putem Gmail-a, a link u poruci navodi primaoce da se prijave na Gmail da prisustvuju sastanku. 
 
-Fišing se pojavio negde oko 1995., ali je postao čest tek nakon 10 godina. Prvi napadi bili su vezani za AOL (eng. {\em America Online}) (dodaj referencu), u to vreme najpopularniji internet provajder. 2000ih su napadi prešli na platne sisteme poput E-Gold, eBay i PayPal.
-Zanimljivo je povećanje fišing napada na kineske e-trgovine, što ukazuje na povećavanje važnosti kineske ekonomije. U 2018. godini APWG (Anti-Phishing Working Group) je otkrio 785 920 sajtova za fišing. Na grafiku je prikazana količina otkrivenih sajtova za fišing tokom godina. (tabela)
+Fišing se pojavio negde oko 1995., ali je postao čest tek nakon 10 godina. Prvi napadi bili su vezani za AOL (eng. {\em America Online}), u to vreme najpopularniji internet provajder\cite {phishing_aol}. 2000ih godina su napadi prešli na platne sisteme poput E-Gold, eBay i PayPal.
+Zanimljivo je povećanje napada na kinesku elektronsku trgovinu, što ukazuje na povećanje važnosti kineske ekonomije \cite{knjiga}.
+U tabeli \ref{tab:tabela1} je prikazana količina sajtova za fišing koje je otkrila APWG (eng. {\em Anti-Phishing Working Group}) tokom godina \cite{apwg}.
+
+\begin{table}[h!]
+\begin{center}
+\caption{Količina sajtova za fišing tokom godina}
+\begin{tabular}{|l||l|l|l|l|} \hline
+godina                  & 2015 & 2016 & 2017 & 2018\\ \hline
+br. otkrivenih sajtova  & 789 068 & 1 397 553& 662 795& 785 920\\ \hline
+\end{tabular}
+\label{tab:tabela1}
+\end{center}
+\end{table}
+
+
 
 \subsection{SQL injekcija}
 \label{subsec:sql}
