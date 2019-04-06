@@ -158,7 +158,7 @@ Treba napraviti razliku između sajber kriminalca i hakera. Sajber kriminalci sa
 
 \label{sec:vrste_sajber_napada}
 
-U mnogim zemljama, Internet odvija ključnu ulogu u svakodnevnom životu ljudi. Olakšava virtuelnu komunikaciju među ljudima, podstiče razvoj novih poslovnih modela i kompanija, menja način na koji ljudi kupuju. U 2018. godini, transfer novca koji uključuje prodaju i kupovinu putem Interneta, iznosila je oko \$2800 milijardi. Prema statističkim studijama \cite{statistika}, smatra se da će u 2021. ta vrednost iznositi oko \$4.88 biliona. Iz ovih razloga, nije neobično da je sa porastom popularnosti Interneta porasla i stopa kriminala na njemu. U ovom poglavlju otkrivamo tri vrste napada putem Interneta.
+U mnogim zemljama, Internet odvija ključnu ulogu u svakodnevnom životu ljudi. Olakšava virtuelnu komunikaciju među ljudima, podstiče razvoj novih poslovnih modela i kompanija, menja način na koji ljudi kupuju. U 2018. godini, transfer novca koji uključuje prodaju i kupovinu putem Interneta, iznosila je oko \$2800 milijardi. Prema statističkim studijama \cite{statistika}, smatra se da će u 2021. ta vrednost iznositi oko \$4.88 biliona. Iz ovih razloga, nije neobično da je sa porastom popularnosti Interneta porasla i stopa kriminala na njemu. U ovom poglavlju će biti obrađene tri vrste napada putem Interneta.
 
 \subsection{Fišing (eng. {\em phishing})}
 \label{subsec:phishing}
@@ -275,7 +275,7 @@ Glavni trend koji pokreće evoluciju računarskih napada i ekspoatacija uključu
 
 Kada kriminalci budu otkrili pouzdan način za zaradu novca na ovoj grani kriminala, broj incidenata ovog tipa će se neizbežno povećati. Napadači su osmislili različite poslovne modele koji su niskog rizika, tako da je mala verovatnoca da će napadač biti uhvacen ukoliko pažljivo skriva svoje tragove. Tako mogu da se zarade stotine hiljada ili čak milioni dolara.
 
-Faktor koji podstiče rast sajber napada je bot (skracenica od reci \textit{robot}) softver. Ovaj softver dozvoljava napadaču da kontroliše neki sistem širom Interneta. Jedan napadač ili grupa napadača moze da postavi ogromne botnet-ove širom sveta. Mašine koje kontrolišu botovi omogućavaju napadačima da postavljaju virtualne superračunare koji mogu da predstavljaju rivale nacionalnoj računarskoj snazi. Mogu da koriste te resurse da bi stvorili ogromnu poplavu, provale (eng. {\em crack}) kripto ključeve ili lozinke, ili da bi istražili osetljive finansijske podatke koji se koriste za krađu identiteta.
+Faktor koji podstiče rast sajber napada je bot (skracenica od reci \textit{robot}) softver. Ovaj softver dozvoljava napadaču da kontroliše neki sistem širom Interneta. Jedan napadač ili grupa napadača moze da postavi ogromne botnet-ove širom sveta. Mašine koje kontrolišu botovi omogućavaju napadačima da postavljaju virtualne superračunare koji mogu da predstavljaju rivale nacionalnoj računarskoj snazi. Mogu da koriste te resurse da bi stvorili ogromnu poplavu, razbiju (eng. {\em crack}) kripto ključeve ili lozinke, ili da bi istražili osetljive finansijske podatke koji se koriste za krađu identiteta.
 
 Botovi i ostali alati koji se koriste za napade su postali veoma modularni, svaki modul se sastoji iz softverskih komponenti koje omogućavaju napadačima da brzo menjaju funkcionalnost kako bi pokrenuli nove vrste napada. Obični botovi danas sadrže 50 do 100 različitih funkcionalnih modula; napadač može da ugasi ili odstrani module koji nisu potrebni za dati napad, dok lako integriše nove funkcije koda. 
 %Drugi modularni napadački alati sadrže eksploatacione okvire (eng. {\em exploitation  frameworks}) koji prave pakovani eksploatacioni kod koji može da se infiltrira u ciljnu mašinu koja je ranjiva (zato što je pogrešno konfigurisana ili nepovezana).
@@ -285,15 +285,16 @@ Ubrzavajući evoluciju, napadači se sve više oslanjaju na bot kod koji se sam 
 \section{Sajber napadi}
 \label{sec:sajber_napadi}
 
-Sajber napad predstavlja napad od računara do računara koji povređuje poverljivost, integritet i informacije koje se nalaze na napdanutom računaru \cite{knjiga}. U ovom poglavlju ćemo se susresti sa nekim primerima napada na države i velike svetske gigante u poslednjih deset godina.
+Sajber napad predstavlja napad od računara do računara koji povređuje poverljivost, integritet i informacije koje se nalaze na napdanutom računaru \cite{knjiga}. Na slici \ref{fig:primer_napada} se može videti kako proces jednog sajber napada može da izgleda. U ovom poglavlju ćemo se susresti sa nekim primerima napada na države i velike svetske gigante u poslednjih deset godina.
 
 \clearpage
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=0.48\textwidth]{napad.png}
-\caption{Sajber napad}
 \end{center}
+\caption{Sajber napad}
+\label{fig:primer_napada}
 \end{figure}
 
 \subsection{Primeri samostalnih napada}
@@ -301,6 +302,7 @@ Sajber napad predstavlja napad od računara do računara koji povređuje poverlj
 
 \begin{description}
 \item[DŽENSON DŽEJMS ANČETA] Dženson Džejms Ančeta, radnik u jednom Internet kafeu, je 2004. i 2005. napravio mrežu od oko 400000 botova, uključujući i računare kojima je upravljalo Ministarstvo odbrane SAD-a. Softveri za reklame (eng. {\em adware companies}), spameri i ostali su platili Ančeti da koriste te računare. Nakon što ga je FBI uhapsio, Ančeta se izjasnio krivim za razne optužbe, uključujući prekršavanje zakona o zlostavljanju računara. U maju 2005, federalni sudija je osudio Ančetu na 57 meseci zatvora i tražio od njega da plati \$15000 američkoj Vladi zbog napada na Ministarstvo odbrane. Zbog njegovih ilegalinih aktivnosti, Vlada je Ančeti oduzela njegov 1993 BMW, više od \$60000 u kešu, kao i njegovu računarsku opremu.
+
 
 \item[PHARMAMASTER] Izraelska kompanija Blue Security je napravila sistem za zastrašivanje spamova kako bi pomogla ljudima koji ne žele da primaju spampve. Blue Security je prodavala svoj sistem preduzećima, dok su individualci mogli besplatno da štite svoje računare. Oko pola miliona ljudi se prijavilo za ovu besplatnu uslugu. Korisnici su na svojim računarima učitali bot po nazivu Blue Frog koji je integrisan sa Yahoo! Mail-om, Gmail-om, Hotmail-om i provera da li su dolazeći mejlovi spamovi. Kada naiđe na spam poruku, bot kontaktira Blue Security server kako bi otkrio izvor tog mejla i zatim spameru salje opt-out\footnote{Instrukcija od strane primaoca mejla da se spreči dalje slanje robe, informacija ili poruka od strane pojedinca ili kompanije.} poruku.
 
@@ -311,6 +313,7 @@ Jedan spamer, čiji je nadimak bio PharmaMaster, nije se povukao. On je pretio B
 Narednog dana je počeo da napada sam Blue Security. Lansirao je DDoS napad sa desetina hiljada botova ciljajući Blue Security servere. Ogromna količina dolaznih poruka je onemogucila Blue Frog uslugu. Kasnije su se DDoS napadi fokusirali na druge kompanije koje pružaju Internet usluge Blue Security-u. Na kraju su napadi ciljali preduzeća koja su placala usluge Blue Seciruty-u. Kada je Blue Security shvatio da ne može da zaštiti svoje klijente od DDoS napada i mejlova sa virusima, nevoljno je prekinuo svoju uslugu.
 
 %\item[AVALANCHE GANG] Avalanche Gang je ime dato kriminalnom preduzeću koje je odgovorno za više fišing napada nego bilo koja druga organizacija. APWG\cite{apwg} je procenila da je Avalanche Gang odgovoran za dve trećine svih phishing napada lansiranih u drugoj polovini 2009. U drugoj polovini 2010, APWG je zapazila da je Avalanche skoro prestao sa fišing napadima, vodeći APWG da spekuliše da je Avalanche menjao strategije i fokusirao se na širenje neželjene pošte koja ljude uvlači u preuzimanje Zeus trojanca.
+
 
 \item[ALBERT GONZALEZ] Albert Gonzalez je 2010. osuđen na 20 godina zatvora nakon što se izjasnio krivim za koriscenje SQL injekcija kako bi ukrao više od 130 miliona brojeva kreditnih i debitnih kartica. Neki od tih brojeva su prodati onlajn, što je dovelo do neovlašćenih kupovina i povlačenja banaka. Ciljevi napada su bili Heartland Payment Systems,  7-Eleven,  Hannaford Brothers Supermarkets,  TJX,  DSW,  Barnes \& Noble, OfficeMax, i Dave \& Buster lanci restorana. Većina brojeva je ukradena od firme Heartland Payment Systems, procenjujući gubitak na \$130 miliona.
 \end{description}
@@ -367,7 +370,7 @@ Norveška je omogućila glasanje putem Interneta 2011. i 2013. godine, ali se na
 \subsection{Etička procena}
 \label{subsec:Eticka procena}
 
-U ovom poglavlju diskutovaće se o glasanju putem Interneta na osnovu prikazanih rizika i benefita.\\
+U ovom poglavlju biće diskutovano o glasanju putem Interneta na osnovu prikazanih rizika i benefita.\\
 
 \noindent BENEFITI GLASANJA PUTEM INTERNETA
 \begin{itemize}
