@@ -71,7 +71,7 @@ Internet je jedno od najmoćnijih oružja današnjice koji nudi mnoge pogodnosti
 \section{Uvod}
 \label{sec:uvod}
 
-U ovom radu ćemo se na početku upoznati sa pojmom sajber kriminala\cite{kriminal}, kao i problemom rasprostranjenosti sajber napada. Dalje će biti prikazane 3 najčešće vrste napada - fišing, SQL injekcija i DoS. Sajber kriminal brzo napreduje, što prouzrokuje razvoj i nastanak novih vrsta napada. U petom poglavlju, koje se odnosi na primere napada, biće prikazani problemi najvećih svetskih kompanija \cite{kompanije} i država \cite{knjiga}, i kako su se one suočavale sa tim. Nakon ovoga, pozabavićemo se temom glasanja putem Interneta.
+U ovom radu ćemo se na početku upoznati sa pojmom sajber kriminala\cite{kriminal}, kao i problemom rasprostranjenosti sajber napada. Dalje će biti prikazane 3 najčešće vrste napada - fišing, SQL injekcija \cite{sql_injection} i DoS. Sajber kriminal brzo napreduje, što prouzrokuje razvoj i nastanak novih vrsta napada. U petom poglavlju, koje se odnosi na primere napada, biće prikazani problemi najvećih svetskih kompanija \cite{kompanije} i država \cite{knjiga}, i kako su se one suočavale sa tim. Nakon ovoga, pozabavićemo se temom glasanja putem Interneta.
 
 
 %Broj naslova i podnaslova je proizvoljan. Neophodni su samo Uvod i Zaključak. Na poglavlja unutar teksta referisati se po potrebi. 
@@ -219,7 +219,7 @@ sql = 'SELECT * FROM Users WHERE Name ="' + uName + '" AND Pass ="' + uPass + '"
 \end{lstlisting}
 \end{primer}
 
-\noindent Ukoliko naš k\^{o}d izgleda kao u primeru \ref{primer_2} može se pristupiti korisničkim imenima i šiframa u bazi unoseći \texttt{"} OR \texttt{"}\texttt{"}=\texttt{"} u polje za šifru i u polje za korisničko ime. K\^{o}d na serveru će kreirati ispravan SQL upit:
+\noindent Ukoliko naš kod izgleda kao u primeru \ref{primer_2} može se pristupiti korisničkim imenima i šiframa u bazi unoseći \texttt{"} OR \texttt{"}\texttt{"}=\texttt{"} u polje za šifru i u polje za korisničko ime. Kod na serveru će kreirati ispravan SQL upit:
 
 \begin{lstlisting}[frame=single]
 SELECT * FROM Users WHERE Name ="" OR ""="" AND Pass ="" OR ""="";
@@ -350,7 +350,7 @@ Postoje mnogi načini na koje napadači mogu da naruše bezbednost umreženih ra
 
 Predsednički izbori 2000. godine su bili jedni od najneizvesnijih u istoriji SAD. Presudni su bili izborni glasovi države Florida. Bez njih ni demokrata Al Gor (eng. {\em Al Gore}), ni republikanac Džordž Buš (eng. {\em George V. Bush}) nisu imali većinu glasova. Buš je pobedio sa razlikom od 537 glasova u odnosu na Al Gora. Bušova prednost bila je neverovatno mala: manje od 2 glasa na svakih 10.000 glasova.
 
-Većina okruga u Floridi koristila je mašinu za glasanje u kojoj birači biraju kandidata tako što olovkom probuše rupu u kartici pored odgovarajućeg imena (Slika 2). Prvi problem sa ovim načinom glasanja je da olovka ponekad ne probuši glatko rupu i takve glasove mašina za automatsko prebrojavanje glasova obično ne uračuna. Zbog toga je bilo potrebno ručno prebrojavanje koje se fokusiralo na identifikaciji takvih glasačkih listića. Druga nepravilnost bila je da su neki birači u okrugu Palm Beach bili zbunjeni glasačkim listićima i želeći da glasaju za kandidata Al Gor koji je bio drugi na listi s leve strane, probušili drugu rupu koja zapravo odgovara kandidatu Patu Bakananu. Ova konfuzija je možda koštala Al Gora glasova koji su mu bili potrebni za pobedu na Floridi.
+Većina okruga u Floridi koristila je mašinu za glasanje u kojoj birači biraju kandidata tako što olovkom probuše rupu u kartici pored odgovarajućeg imena (Slika \ref{fig:butterfly_ballot}). Prvi problem sa ovim načinom glasanja je da olovka ponekad ne probuši glatko rupu i takve glasove mašina za automatsko prebrojavanje glasova obično ne uračuna. Zbog toga je bilo potrebno ručno prebrojavanje koje se fokusiralo na identifikaciji takvih glasačkih listića. Druga nepravilnost bila je da su neki birači u okrugu Palm Beach bili zbunjeni glasačkim listićima i želeći da glasaju za kandidata Al Gor koji je bio drugi na listi s leve strane, probušili drugu rupu koja zapravo odgovara kandidatu Patu Bakananu. Ova konfuzija je možda koštala Al Gora glasova koji su mu bili potrebni za pobedu na Floridi.
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{butterfly_ballot.jpg}
@@ -367,37 +367,33 @@ Norveška je omogućila glasanje putem Interneta 2011. i 2013. godine, ali se na
 \subsection{Etička procena}
 \label{subsec:Eticka procena}
 
-U ovom poglavlju biće vršena diskusija o glasanju putem Interneta na osnovu prikazanih rizika i benefita. Diskusija podrazumeva da je glasanje sprovedeno preko Interneta, implementirano preko veb pregledača, iako bi bilo slično da je korišćena neka druga tehnologija.\\
+U ovom poglavlju diskutovaće se o glasanju putem Interneta na osnovu prikazanih rizika i benefita.\\
 
-
-\noindent BENEFITI GLASANJA PREKO INTERNETA
+\noindent BENEFITI GLASANJA PUTEM INTERNETA
 \begin{itemize}
-\item Glasanje preko Interneta daje ljudima priliku da glasaju iz svojh domova, ukoliko nisu u mogućnosti da dođu do biračkog mesta.
-\item Glasovi koji se salju preko Interneta mogu se prebrojati mnogo brže od glasova na papiru.
+\item Glasanje putem Interneta daje ljudima priliku da glasaju iz svojh domova, ukoliko nisu u mogućnosti da dođu do biračkog mesta.
+\item Glasovi koji se šalju putem Interneta mogu se prebrojati mnogo brže od glasova na papiru.
 \item Elektronski glasovi ne bi imali nikakvu dvosmislenost.
 \item Izbori koji su sprovedeni na Internetu koštali bi manje nego tradicionalni izbori.
-\item Glasanje preko Interneta eliminisalo bi rizik da neko manipuliše glasačkom kutijom u kojoj se nalaze glasački listići.
-\item Dok na većini izbora ljudi glasaju za jednog kandidata, drugi izbori omogucavaju da osoba glasa za više kandidata. Na primer, školski odbor može imati tri slobodna radna mesta, a od glasača se moze tražiti da glasaju za tri kandidata. Bilo bi lako isprogramirati obrazac za glasanje kako bi se sprečilo da ljudi glasaju za više ljudi nego što bi trebalo.
+\item Glasanje putem Interneta eliminisalo bi rizik da neko manipuliše glasačkom kutijom u kojoj se nalaze glasački listići.
+\item Dok na većini izbora ljudi glasaju za jednog kandidata, drugi izbori omogućavaju da osoba glasa za više kandidata. Na primer, školski odbor može imati tri slobodna radna mesta, a od glasača se moze tražiti da glasaju za tri kandidata. Bilo bi lako isprogramirati obrazac za glasanje kako bi se sprečilo da ljudi glasaju za više ljudi nego što bi trebalo.
 \item Ponekad, dugi i komplikovani glasački papiri rezultiraju tome da glasač slucajno zaboravi da zaokruži kandidata za određenu poziciju. Veb forma bi mogla da se dizajnira da bude na više strana i da svaka strana ima kandidata za jednu poziciju.
 \end{itemize}
 
 
-\noindent RIZICI GLASANJA PREKO INTERNETA
+\noindent RIZICI GLASANJA PUTEM INTERNETA
 \begin{itemize}
-\item Glasanje preko Interneta je nepravedno, jer daje predost onima koji su u finansijski boljoj situaciji tj. ljudima koji imaju računare i Internet.
-\item Isti sistem vrsi autentifikaciju glasača i beleži glasački listić. Ovo otezava čuvanje privatnosti glasača.
-\item Glasanje preko Interneta povećava mogućnost za kupovinu i prodaju glasova. Pretpostavimo da se osoba X slozi da glasa za kandidata Y u zamenu za isplatu od osobe Z. Ako osoba X glasa sa njegovog računara, moze da dozvoli osobi Z da gleda kako je glasao za Y, dokazujući na taj način da je ispunio svoje obećanje. Ovo je mnogo manje verovatno na zvaničnom biračkom mestu koje nadgledaju izborni zvaničnici.
-\item Veb lokacija koja održava izbore očigledna je meta DDos napada. Za razliku od korporativnih veb stranica, koje privlače pažnju tinejdzera hakera, veb stranica za nacionalne izbore mogla bi privući pažnju stranih vlada ili terorista koji pokušavaju poremetiti izborni proces.
-\item Virus bi mogao da promeni glas neke osobe, a da ta osoba čak i ne posumnja u ono što se desilo. Mnogi ljudi imaju fizički pristup računarima drugih ljudi, i to im daje mogućnost instaliranja aplikacija za obmanu glasača u nedeljama koje prethode izborima.
-\item \textit{Trojanac} koji vreba na računaru glasača bi mogao da omogući da glasač bude posmatran. \textit{Trojanac} bi čak mogao da omogući da neko drugi glasa umesto pravog glasača.
-\item Napadač moze da prevari korisnika da misli da je povezan sa serverom za glasanje kada je u stvari povezan sa lažnim serverom za glasanje koji je kontrolisan od strane napadača. Na primer, napadač moze da pošalje mejl u kojem se glasači pozivaju da kliknu na link da bi došli do mesta glasanja. Učinivši to, oni bi bili povezani sa lažnim glasačkim mestom. Napadač može tražiti potrebne informacije birača, a zatim koristiti te informacije da se poveže sa pravim biračkim mestom i glasa za kandidata za koga želi.
+\item Glasanje putem Interneta daje prednost onima koji su u finansijski boljoj situaciji tj. ljudima koji imaju računare i Internet.
+\item Isti sistem vrši autentifikaciju glasača i beleži glasački listić. Ovo otežava čuvanje privatnosti glasača.
+\item Glasanje putem Interneta povećava mogućnost za kupovinu i prodaju glasova. Pretpostavimo da se osoba X složi da glasa za kandidata Y u zamenu za isplatu od osobe Z. Ako osoba X glasa sa njegovog računara, može da dozvoli osobi Z da gleda kako je glasao za Y, dokazujući na taj način da je ispunio svoje obećanje. Ovo je mnogo manje verovatno na zvaničnom biračkom mestu koje nadgledaju izborni zvaničnici.
+\item Veb lokacija koja održava izbore očigledna je meta DDoS napada. Za razliku od korporativnih veb stranica, koje privlače pažnju tinejdžera hakera, veb stranica za nacionalne izbore mogla bi privući pažnju stranih vlada ili terorista koji pokušavaju poremetiti izborni proces.
+\item \textit{Backdoor} Trojanac\footnote{Štetni program maskiran u program koji je koristan, dok u pozadini izvršava zlonamerne akcije bez znanja korisnika.} (eng. {\em backdoor Trojan})\footnote{Trojanac koji napadaču daje pristup računaru žrtve.} koji vreba na računaru glasača bi mogao da omogući da glasač bude posmatran ili čak da omogući da neko drugi glasa umesto pravog glasača.
+\item Napadač može da prevari korisnika da misli da je povezan sa serverom za glasanje kada je u stvari povezan sa lažnim serverom za glasanje koji je kontrolisan od strane napadača. Na primer, napadač može da pošalje mejl u kojem se glasači pozivaju da kliknu na link da bi došli do mesta glasanja. Učinivši to, oni bi bili povezani sa lažnim glasačkim mestom. Napadač može tražiti potrebne informacije birača, a zatim koristiti te informacije da se poveže sa pravim biračkim mestom i glasa za kandidata za koga želi.
 \end{itemize}
 
-\noindent ZAKLJUČAK
-
-,,Siguran sistem za glasanje preko Interneta je teorijski moguć, ali to bi bila prva sigurna umrežena aplikacija ikada stvorena u istoriji računarstva.‘‘, napisao je Bruce Schneier.\\
-\indent Već postoji dokaz da je došlo sumnjivih radnji na izborima preko Interneta. U aprilu 2001. Vivendi Universal, pariski medijski konglomerat, održao je glasanje preko Interneta za svoje akcionare. Hakeri su napravili da se glasovi nekih velikih akcionara racunaju kao uzdržani. Ako ovakvi privatni izbori mogu privući pažnju hakera, pretpostavlja se da bi neki veći izbori bili atraktivnija meta.\\
-\indent Svaki izborni sistem koji se oslanja na bezbednost ličnih računara kojim upravljaju obični građani biće osetljiv na prevare. Samo iz tog razloga, postoji jak argument zašto vlada ne bi dozvolila da se na taj način sprovede glasanje.
+,,Siguran sistem za glasanje putem Interneta je teorijski moguć, ali to bi bila prva sigurna umrežena aplikacija ikada stvorena u istoriji računarstva.‘‘, napisao je Bruce Schneier\cite{online_voting}.\\
+\indent U aprilu 2001. Vivendi Universal, pariski medijski konglomerat, održao je glasanje putem Interneta za svoje akcionare. Hakeri su napravili da se glasovi nekih velikih akcionara računaju kao uzdržani. Ako ovakvi privatni izbori mogu privući pažnju hakera, pretpostavlja se da bi neki veći izbori bili atraktivnija meta.\\
+\indent Svaki izborni sistem koji se oslanja na bezbednost ličnih računara kojim upravljaju obični građani biće osetljiv na prevare. Iz tog razloga, postoji jak argument zašto vlada ne bi dozvolila da se na taj način sprovede glasanje.
 
 \section{Zaključak}
 \label{sec:zakljucak}
@@ -411,9 +407,5 @@ Iz svega priloženog, korišćenje Interenta bi trebalo da bude odgovono. Videli
 \raggedright
 \bibliography{seminarski} 
 \bibliographystyle{plain}
-\begin{enumerate} 
-%\item \url{https://cybersecurityventures.com/cybercrime-damages-6-trillion-by-2021/}
-\item \url{https://www.w3schools.com/sql/sql_injection.asp}
-\end{enumerate}
 
 \end{document}
