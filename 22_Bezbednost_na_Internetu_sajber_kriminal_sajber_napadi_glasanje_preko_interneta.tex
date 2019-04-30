@@ -1,0 +1,216 @@
+
+
+ % !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper]{report}
+
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8x,utf8]{inputenc} % make weird characters work
+\usepackage[serbian]{babel}
+%\usepackage[english,serbianc]{babel}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\odgovor}[1]{\textcolor{blue}{#1}}
+
+\begin{document}
+
+\title{Dopunite naslov svoga rada\\ \small{Dopunite autore rada}}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Uputstva}
+\emph{Prilikom predavanja odgovora na recenziju, obrišite ovo poglavlje.}
+
+Neophodno je odgovoriti na sve zamerke koje su navedene u okviru recenzija. Svaki odgovor pišete u okviru okruženja \verb"\odgovor", \odgovor{kako bi vaši odgovori bili lakše uočljivi.} 
+\begin{enumerate}
+
+\item Odgovor treba da sadrži na koji način ste izmenili rad da bi adresirali problem koji je recenzent naveo. Na primer, to može biti neka dodata rečenica ili dodat pasus. Ukoliko je u pitanju kraći tekst onda ga možete navesti direktno u ovom dokumentu, ukoliko je u pitanju duži tekst, onda navedete samo na kojoj strani i gde tačno se taj novi tekst nalazi. Ukoliko je izmenjeno ime nekog poglavlja, navedite na koji način je izmenjeno, i slično, u zavisnosti od izmena koje ste napravili. 
+
+\item Ukoliko ništa niste izmenili povodom neke zamerke, detaljno obrazložite zašto zahtev recenzenta nije uvažen.
+
+\item Ukoliko ste napravili i neke izmene koje recenzenti nisu tražili, njih navedite u poslednjem poglavlju tj u poglavlju Dodatne izmene.
+\end{enumerate}
+
+Za svakog recenzenta dodajte ocenu od 1 do 5 koja označava koliko vam je recenzija bila korisna, odnosno koliko vam je pomogla da unapredite rad. Ocena 1 označava da vam recenzija nije bila korisna, ocena 5 označava da vam je recenzija bila veoma korisna. 
+
+NAPOMENA: Recenzije ce biti ocenjene nezavisno od vaših ocena. Na osnovu recenzije ja znam da li je ona korisna ili ne, pa na taj način vama idu negativni poeni ukoliko kažete da je korisno nešto što nije korisno. Vašim kolegama šteti da kažete da im je recenzija korisna jer će misliti da su je dobro uradili, iako to zapravo nisu. Isto važi i na drugu stranu, tj nemojte reći da nije korisno ono što jeste korisno. Prema tome, trudite se da budete objektivni. 
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+
+Rad se bavi temom sajber kriminala, njegovim posledicama i srodnom temom glasanja preko računarskih mreža. U okviru sajber kriminala detaljnije su objašnjeni fišing, SQL injekcija i DoS napadi kao primeri češćih vrsta napada. Objašnjen je koncept malvera i opasnost koju on predstavlja. Dati su primeri sajber napada, između ostalog onih koji su izvršili pojedinci i napada na države i velike kompanije. Takođe su obrazložene prednosti i mane glasanja preko interneta.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+
+Po pitanju krupnijih primedbi jedino se ističe nelogično korišćenje tabele.
+Tabela 1 (``Količina sajtova za fišing'') ne prikazuje nikakav trend, bilo rasta ili opadanja. Bolje je izbaciti ili zameniti je tabelom koja prikazuje neku korisnu informaciju. Slika 1 (``Sajber napad'') nije problematična koliko i tabela 1, ali deluje sitno i u njoj je puno elemenata koje nije lako razaznati. Takođe, tok dijagrama u slici ne ide konstantno sa leva na desno, već menja smer i deluje konfuzno na prvi pogled.\\
+\odgovor {Veličina slike je povećana, ali struktura nije menjana jer se smatra da je tok dijagrama nije konfuzan, ali se sigurno sve bolje vidi sada kada je slika uvećana. Tabela je obrisana.}
+
+Što se tiče sugestija, autori bi mogli promeniti imena glava i ispremeštati njihov redosled. Na primer u glavi 4, ``Sajber kriminal'', piše se konkretno o malveru, a takođe postoji glava ``Pojam sajber kriminala'' sa sličnim naslovom. Naslov glave 4 možda bi trebalo promeniti u ``Malver'', ``Zlonamerni kod'' ili nešto slično. Takođe, deluje da je bolje glavu ``Sajber napadi'' preimenovati u ``Primeri sajber napada'' i definiciju sajber napada iz te glave premestiti u glavu ``Vrste sajber napada'' koja joj prethodi. U suprotnom bi pričali o vrstama napada, a tek nakon toga bi rekli šta je zapravo sajber napad. Takođe bi imali glavu ``Vrste sajber napada'' praćenu glavom ``Sajber napadi'', što na prvi pogled može da zbuni čitaoca.
+\odgovor{Naslovi ,,Sajber napadi‘‘ i ,,Vrste sajber napada‘‘ su premešteni, i naslov ,,Sajber napadi‘‘ su preimenovani u ,,Vrste sajber napada‘‘. Naslov ,,Sajber kriminal‘‘ nije promenjen, u tom delu se govori o malveru i čitalac treba da bude upoznat sa tim pojmom zbog daljeg razumevanja, ali nije akcenat na tome.}
+
+Jedan predlog je možda odvojiti glavu koja će da se bavi isključivo time kako prosečan korisnik može da se zaštiti od neželjenih napada, na primer pronaći neku stručnu organizaciju koja ima predloge mera opreza ili literaturu koja se bavi tom temom.
+\odgovor{Kako nije bilo mesta gde to da stavimo, ubacile smo taj deo u dodatak.}
+
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+U glavi 3 ``Vrste sajber napada'' pominju se brojke \textit{2800 milijardi} i \textit{4.88 biliona}. Možda je bolje koristiti jednu vrstu zapisa (2.8 i 4.88 biliona ili 2800 i 4880 milijardi).
+
+Naslov podglave 6.2 je ``Etička procena'', ali benefiti i rizici opisani u njoj su više praktičnog nego etičkog tipa. Možda bi trebalo preimenovati podglavu u ``Procena prednosti i mana'' ili nešto slično.\\
+
+Greške u kucanju:
+\begin{itemize}
+\item Glava 2: prvi red u zagradi, \textit{cyber criminal} znači sajber kriminalac, a ne sajber kriminal kao što je naznačeno.
+%\item Podglava 3.1: poslednji paragraf, godina 1995-a nije zapisana u rednom obliku? Slično i u 5.1?
+\item Podglava 3.3: u četvrtom redu umesto može piše moze.
+\item Glava 4: u prvom redu umesto eksploatacija piše ekspoatacija.
+\item Glava 4: prvi red strane 6. Piše mesešno umesto mesečno.
+\item Glava 4: osmi red strane 6. Piše verovatnoca umesto verovatnoća i uhvacen umesto uhvaćen.
+\item Glava 4: jedanaesti red strane 6. U skracenica i reci treba zameniti c sa ć.
+\item Glava 4: 13. red strane 6. Moze prebaciti u može.
+\item Glava 5: u drugom redu piše napdanutom umesto napadnutom.
+\item Podglava 5.1: PHARMAMSTER pasus, 3. red. Spampve piše umesto spamove.
+\item Podglava 5.1: PHARMAMSTER pasus, 11. red piše salju umesto šalju.
+\item Podglava 5.1: PHARMAMSTER pasus, 19. red, vise umesto više .
+\item Podglava 5.1: strana 8, treći red, onemogucila umesto onemogućila.
+\item Podglava 5.1: strana 8, 6. red, placala u plaćala.
+\item Podglava 5.1: ALBERT GONZALES pasus, drugi red, koriscenje u korišćenje.
+\item Podglava 5.2: GRUZIJA pasus, četvrti red, pokrajna u pokrajina.
+\item Podglava 5.2: GRUZIJA pasus, pretposlednji red, Facobook u Facebook.
+\item Podglava 5.2: SAD I JUŽNA KOREJA pasus, prvi red, DDos u DDoS.
+\item Zaključak: u prvom redu umesto odgovorno piše odgovono.
+\end{itemize}
+
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Rad dobro odgovara zadatoj temi, ništa u radu ne deluje suvišno ili udaljeno od teme.
+
+\item Da li je nešto važno propušteno?\\
+Deluje da ništa nije važno propušteno jer teme sajber napada i kriminala su dobro obrađene sa konkretnim primerima. Takođe je deo o internet glasanju adekvatno napisan.
+
+\item Da li ima suštinskih grešaka i propusta?\\
+Ne deluje da ima suštinskih propusta u radu. Greške su većinom u kucanju i lošijoj organizaciji rada. Jedina možda ozbiljnija greška je neadekvatna tabela.
+
+\item Da li je naslov rada dobro izabran?\\
+Naslov dobro predstavlja suštinu rada. Takođe format naslova u obliku pitanja koje aludira na opasnost može da zaintrigira potencijalnog čitaoca.
+
+\item Da li sažetak sadrži prave podatke o radu?\\
+Sažetak verno opisuje ostatak rada.
+
+\item Da li je rad lak-težak za čitanje?\\
+Rad je lak za čitanje. Svi pojmovi koji bi mogli biti nejasni čitaocu su pojašnjeni. Teme su razrađene tako da nisu preduge i teške za praćenje. Konkretni primeri dosta pomažu u razumevanju rada. Stil pisanja takođe doprinosi čitljivosti rada.
+
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Za čitanje rada potrebno je jedino znati šta su to računari i Internet. Kao takav može se reći da rad zahteva minimalno predznanje i da je adekvatan za većinu populacije.
+
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Sva priložena literatura je adekvatna za temu rada.
+
+\item Da li su u radu reference korektno navedene?\\
+Deluje da su sve reference u radu navedene ispravno na predviđen način.
+
+\item Da li je struktura rada adekvatna?\\
+Struktura rada je većinom adekvatna. Za sve podteme je odvojen odgovarajući deo. Moguće je malo preurediti poglavlja, ali i ovakav rad je u redu.
+
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Broj strana je u okviru zadatih 10 do 12. Od referenci rad sadrži adekvatnu veb adresu ([1] - ``w3schools.com''), knjigu ([5] - ``Cyberpower and National Security'') i naučni rad ([12] - ``Technology Was Only Part of the Florida Problem'') čime ispunjava i taj uslov.
+Rad obuhvata jednu tabelu, ali ona ne prikazuje nikakvu korisnu informaciju. Time se dobija utisak da je tabela ubačena samo radi ispunjavanja uslova, što nije u duhu zadatka. Slika u radu pokazuje kako izgleda sajber napad i iako je sitna i malo konfuzna ispunjava propisan uslov.
+Rad sadrži ukupno 13 referenci čime ispunjava uslov minimuma od 7 referenci. Jedina zamerka odnosi se na tabelu.
+
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Tabela 1 deluje suvišna i ne doprinosi sa bilo kakvom novom informacijom. Slika 1 može biti unapređena. Primeri SQL koda su korektni.
+
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+Smatram da sam srednje upućen u oblast sajber kriminala. Upoznat sam uopšteno sa češćim vrstama napada i čitao sam o nekim slučajevima napada. Razumem pojmove \textit{fišinga}, \textit{društvenog inženjeringa} i sl. Sa druge strane nisam veoma upućen u tehničke aspekte oblasti, kako konkretno se zaštiti pri pravljenju softvera, kako pisati štetan kod i koji su industrijski standardi u računarskoj sigurnosti.
+
+
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+
+\section{O čemu rad govori?}
+Na početku se objašnjava šta je to sajber kriminal. Kasnije se opisuju 3 najčešće vrste napada - fišing, SQL injekcija i DoS. Zatim se navode primeri napada na kompanije, pojedince i države kroz istoriju. Na kraju se piše o glasanju na internetu, njene prednosti i mane.
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+
+\section{Krupne primedbe i sugestije}
+
+Umesto prve tabele, stavio bih grafik na kom bi se lepo videlo na krivi kako raste, odnosno opada broj fišing napada kroz dati period. Takođe dodao bih za svaku vrstu sajber napada deo gde se govori o zaštiti od istog. Za fišing bih dodao neke uobicajene primere koje smo svi videli u životu kao što su da smo dobili neko nasledstvo ili da smo srećni dobitnici milion evra. Takođe bih opisao kakvo je stanje u Srbiji o privatnosti informacija korisnika, i situacije da dosta Internet prodavnica kod nas nije HTTPS već HTTP(da se opiše razlika, i da se objasni zašto je bitno HTTPS kada su u pitanju formulari za unošenje privatnih informacija). Moglo je se spomenuti da je sve vise prisutno u poslednje vreme, na nezakonit način pokretanje pozadinskih skripti tokom pretraživanja određenih stranica(npr. u svrhu rudarenja). Kod SQL injekcije po mom mišljenju su suvišni određeni delovi kodova. Dodao bih sliku mape sveta gde je crvenom i zelenom bojom prikazana stopa sajber kriminala.
+\odgovor{Umesto tabele je dodat grafik. Kako nije bilo mesta za zaštitu od sajber napada, neke vrste zaštite smo obuhvatile u dodatku.}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+Rad ima mali broj grešaka u pisanju, što ne utiče na razumevanje samog teksta. Greške koje sam ja primetio su: ekspoatacija umesto eksploatacija, od stane umesto od strane, napdnutom umesto napadanutom, spampve umesto spamove‚ provera umesto proverava, placala umesto plaćala, Sent Peterburg umesto Sankt Peterburg, uslue umesto usluge, odgovono umesto odgovorno.
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Da, dobro odgovara. Opisan je pojam sajber kriminala, vrste napada i za svaku zasebno je opisano kako ti napadi izlgedaju. Takođe, opisano je glasanje preko interneta, i njene prednosti i mane.
+\item Da li je nešto važno propušteno?\\
+Po mom mišljenju, važan deo svakog sajber napada, je deo i gde se piše o zaštiti od istog.
+\item Da li ima suštinskih grešaka i propusta?\\
+Nema. Samo neki mali propusti, i neke moje sugestije.
+\item Da li je naslov rada dobro izabran?\\
+Da, naslov rada odgovara radu koji je napisan.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Da, u sažetku je sve lepo opisano o čemu će se govoriti u radu.
+\item Da li je rad lak-težak za čitanje?\\
+Lak je za čitanje, zanimljiv, i motivacioni da čitaoce zainteresuje za dalja istraživanja.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Ne, rad je tako napisan da svi mogu da razumeju.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Da, na kraju rada je u ispravnom formatu navedena literatura.
+\item Da li su u radu reference korektno navedene?\\
+Da, sve reference su ispravno navedene.
+\item Da li je struktura rada adekvatna?\\
+Da, struktura rada je adekvatno napisana. 
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Sadrzaj sadrži tabelu, adekvatan broj strana, i delove kodova. Nedostaju jedino grafici.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Kao sto sam u sugestijama naveo, prvu tabelu bih zamenio grafikom.
+\end{enumerate}
+
+\section{Ocenite sebe}
+Veoma upućen u datoj oblasti. Dosta knjiga sam procitao vezano za ove oblasti. Sam sam pravio keylogger-e integrisane u određene datoteke kao što su npr. slike ili pdf datoteke, takođe sam pravio fišing sajtove. Koristio sam sisteme BactTrack(danas Kali linux) i Parrot OS. Sve ovo sam radio u naučne svrhe, i u svrhe zaštite od napada, jer kada znate kako napad funkcioniše, lako  se odbraniti od istog.
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+
+
+
+\chapter{Dodatne izmene}
+%Ovde navedite ukoliko ima izmena koje ste uradili a koje vam recenzenti nisu tražili. 
+\odgovor{}
+
+\end{document}
