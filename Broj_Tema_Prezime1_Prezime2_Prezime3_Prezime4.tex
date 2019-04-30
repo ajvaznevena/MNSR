@@ -52,6 +52,8 @@
   tabsize=2,	                     % sets default tabsize to 2 spaces
 }
 
+
+
 \begin{document}
 
 \title{Da li ste bezbedni na Internetu?\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
@@ -61,7 +63,10 @@ marija.milicevic.10.23@gmail.com, tijana.nikcevic1@gmail.com}
 
 \date{April 2019.}
 
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+
 \maketitle
+
 
 \abstract{
 Internet je jedno od najmoćnijih oružja današnjice koji nudi mnoge pogodnosti ako se koristi u prave svrhe. Bezbednost na Internetu je veoma veliki problem i u vezi sa tim upoznaćemo se sa najčešćim vrstama sajber napada, kriminala i pojmom glasanja putem Interneta. Videćemo zašto je naša bezbednost ugrožena i kroz primere poznatih napada opisati načine na koje se ona narušava.
@@ -73,83 +78,13 @@ Internet je jedno od najmoćnijih oružja današnjice koji nudi mnoge pogodnosti
 \section{Uvod}
 \label{sec:uvod}
 
-U ovom radu ćemo se na početku upoznati sa pojmom sajber kriminala\cite{kriminal}, kao i problemom rasprostranjenosti sajber napada. Dalje će biti prikazani problemi najvećih svetskih kompanija \cite{kompanije} i država \cite{knjiga}, i kako su se one suočavale sa tim.  U četvrtom poglavlju obrađena je tema koja se odnosi na 3 najčešće vrste napada - fišing, SQL injekcija \cite{sql_injection} i DoS. Sajber kriminal brzo napreduje, što prouzrokuje razvoj i nastanak novih vrsta napada. Nakon ovoga, pozabavićemo se temom glasanja putem Interneta.
-
-
-%Broj naslova i podnaslova je proizvoljan. Neophodni su samo Uvod i Zaključak. Na poglavlja unutar teksta referisati se po potrebi. 
-%\begin{primer}
-%U odeljku \ref{sec:naslov1} precizirani su osnovni pojmovi, dok su zaključci dati u odeljku \ref{sec:zakljucak}.
-%\end{primer}
-
-%Još jednom da napomenem da nema razloga da pišete:
-%\begin{verbatim}
-%\v{s} i \v{c} i \'c ...
-%\end{verbatim}
-%Možete koristiti srpska slova
-%\begin{verbatim}
-%š i č i ć ... 
-%\end{verbatim}
-
-
-
-%\section{Slike i tabele}
-%\label{slike_i_tabele}
-
-%Slike i tabele treba da budu u svom okruženju, sa odgovarajućim naslovima, obeležene labelom da koje omogućava referenciranje. 
-
-%\begin{primer} Ovako se ubacuje slika. Obratiti pažnju da je dodato i 
-%\begin{verbatim}
-%\usepackage{graphicx}
-%\end{verbatim}
-
-%\begin{figure}[h!]
-%\begin{center}
-%\includegraphics[scale=0.75]{panda.jpg}
-%\end{center}
-%\caption{Pande}
-%\label{fig:pande}
-%\end{figure}
-
-%Na svaku sliku neophodno je referisati se negde u tekstu. Na primer, na slici \ref{fig:pande} prikazane su pande. 
-%\end{primer}
-
-%\begin{primer} I tabele treba da budu u svom okruženju, i na njih je neophodno referisati se u tekstu. Na primer, u tabeli \ref{tab:tabela1} su prikazana različita poravnanja u tabelama.
-
-%\begin{table}[h!]
-%\begin{center}
-%\caption{Razlčita poravnanja u okviru iste tabele ne treba koristiti jer su nepregledna.}
-%\begin{tabular}{|c|l|r|} \hline
-%centralno poravnanje& levo poravnanje& desno poravnanje\\ \hline
-%a &b&c\\ \hline
-%d &e&f\\ \hline
-%\end{tabular}
-%\label{tab:tabela1}
-%\end{center}
-%\end{table}
-
-%\end{primer}
-
-%\section{K\^{o}d i paket listings}
-%Za ubacivanje koda koristite paket \textbf{listings}:
-%\url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}
-
-%Primer ubacivanja koda
-%\begin{lstlisting}[frame=single]
-%# This program adds up integers in the command line
-%import sys
-%try:
-%    total = sum(int(arg) for arg in sys.argv[1:])
-%    print 'sum =', total
-%except ValueError:
-%    print 'Please supply integer arguments'
-%\end{lstlisting}
-
+U ovom radu ćemo se na početku upoznati sa pojmom sajber kriminala \cite{kriminal}, kao i problemom rasprostranjenosti sajber napada. Dalje će biti prikazane 3 najčešće vrste napada - fišing, SQL injekcija \cite{sql_injection} i DoS.  U četvrtom poglavlju, koje se odnosi na primere napada, biće prikazani problemi najvećih svetskih kompanija \cite{kompanije} i država \cite{knjiga} i kako su se one suočavale sa tim. Sajber kriminal brzo napreduje, što prouzrokuje razvoj i nastanak novih vrsta napada. Nakon ovoga, pozabavićemo se temom glasanja putem Interneta.
 
 \section{Pojam sajber kriminala}
 \label{pojam}
 
 Visokotehnološki ili sajber kriminal (eng. {\em cyber crime}) predstavlja moderni vid kriminala, tačnije, putem računara. Sajber kriminalci su osobe ili grupe ljudi koji koriste tehnologiju kako bi izveli zlonamerne aktivnosti putem mreže sa ciljem da ukradu osetljive podatke neke firme, lične informacije ili da profitiraju \cite{sajber}. Takođe, treba napraviti razliku između sajber kriminalca i hakera. Sajber kriminalci sa lošim namerama vrše upad u računare, dok hakeri traže inovativne načine da koriste sistem, bili ti načini loši ili dobri.\\
-\par Zakoni koji se odnose na ovu vrstu kriminala se dopunjuju i razvijaju u zemljama širom sveta. Nerazvijene zemlje su najizloženije sajber napadima. U takvim zemljama je zakon o ovoj oblasti slabo definisan, a u nekim ni ne postoji. U tabeli \ref{tab:tabela1} mogu se videti podaci koji su vezani za Srbiju mereni po globalnom indeksu sajber bezbednosti \footnote{Pouzdan izvor koji meri posvećenost država bezbednosti na Internetu.} (eng. {\em GCI - Global Cybersecurity Index}). U tabeli su prikazane neke od najvažnijih stavki koje se odnose na Srbiju \cite{cgi}.
+\par Zakoni koji se odnose na ovu vrstu kriminala se dopunjuju i razvijaju u zemljama širom sveta. Nerazvijene zemlje su najizloženije sajber napadima. U takvim zemljama je zakon o ovoj oblasti slabo definisan, a u nekim ni ne postoji. U tabeli \ref{tab:tabela1} mogu se videti podaci koji su vezani za Srbiju mereni po globalnom indeksu sajber bezbednosti \footnote{Pouzdan izvor koji meri posvećenost država bezbednosti na Internetu.} (eng. {\em GCI - Global Cybersecurity Index}). U tabeli su prikazane neke od najvažnijih stavki koje se odnose na Srbiju \cite{gci}.
 
 
 \begin{table}[h]
@@ -178,19 +113,19 @@ Iz priloženog se vidi da je Srbija zemlja sa niskom stopom posvećenosti suzbij
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale = 0.3]{itu_worldmap.jpg}
+\includegraphics[height=0.37\textwidth, width=0.9\textwidth]{itu_worldmap.jpg}
 \end{center}
-\caption{Stopa GC indeksa u svetu. Tamnozelenom bojom obeležene su zemlje sa visokom posvešćenošću, dok su crvenom obeležene sa niskom}
+\caption{Stopa GC indeksa u svetu. Tamnozelenom bojom obeležene su zemlje sa visokom posvećenošću, dok su crvenom obeležene sa niskom}
 \label{fig:svet}
 \end{figure}
 
 \newpage
 
- 
-\section{Vrste sajber napada}
 
-\label{sec:vrste_sajber_napada}
+\section{Sajber napadi i vrste}
+\label{sec:sajber_napadi_vrste}
 
+Sajber napad predstavlja napad od računara do računara koji povređuje poverljivost, integritet i informacije koje se nalaze na napadnutom računaru \cite{knjiga}. 
 U mnogim zemljama, Internet odvija ključnu ulogu u svakodnevnom životu ljudi. Olakšava virtuelnu komunikaciju među ljudima, podstiče razvoj novih poslovnih modela i kompanija, menja način na koji ljudi kupuju. U 2018. godini, transfer novca koji uključuje prodaju i kupovinu putem Interneta, iznosila je oko \$2.8 biliona. Prema statističkim studijama \cite{statistika}, smatra se da će u 2021. ta vrednost iznositi oko \$4.88 biliona. Iz ovih razloga, nije neobično da je sa porastom popularnosti Interneta porasla i stopa kriminala na njemu. U ovom poglavlju će biti obrađene tri vrste napada putem Interneta.
 
 
@@ -211,7 +146,7 @@ Na slici \ref{fig:phishing_napadi} prikazana je količina sajtova za fišing koj
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[height=0.4\textwidth, width=0.8\textwidth]{phishing.png}
+\includegraphics[height=0.3\textwidth, width=0.8\textwidth]{phishing.png}
 \end{center}
 \caption{Količina otkrivenih sajtova za fišing}
 \label{fig:phishing_napadi}
@@ -279,22 +214,22 @@ Dodatni tip DoS napada je DDoS (eng. {\em Distributed Denial-of-Service}) napad.
 \item Pravu napadačku grupu (eng. {\em attacking party}) je veoma teško identifikovati, jer se oni prikrivaju iza mnogih (uglavnom kompromitovanih) sistema
 \end{itemize}
 
-Mnoge sigurnosne tehnologije su razvile mehanizme za odbranu od mnogih vrsta DoS napada, ali, zbog jedinstvenih karakteristika, DDoS se još uvek smatra ozbiljnom pretnjom.\\
+Mnoge sigurnosne tehnologije su razvile mehanizme za odbranu od mnogih vrsta DoS napada, ali, zbog jedinstvenih karakteristika, DDoS se još uvek smatra ozbiljnom pretnjom.\\\\
 
-\section{Sajber napadi}
-\label{sec:sajber_napadi}
-
-Sajber napad predstavlja napad od računara do računara koji povređuje poverljivost, integritet i informacije koje se nalaze na napadnutom računaru \cite{knjiga}. Na slici \ref{fig:primer_napada} se može videti kako proces jednog sajber napada može da izgleda. U ovom poglavlju ćemo se susresti sa nekim primerima napada na države i velike svetske gigante u poslednjih deset godina.
-
-%\clearpage
+Na kraju, kao ilustrativan primer, na slici \ref{fig:primer_napada} se može videti kako proces jednog sajber napada može da izgleda. 
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[height=0.48\textwidth, width=0.9\textwidth]{napad.png}
+\includegraphics[height=0.37\textwidth, width=0.9\textwidth]{napad.png}
 \end{center}
 \caption{Sajber napad}
 \label{fig:primer_napada}
 \end{figure}
+
+\section{Primeri napada}
+\label{sec:primeri_napada}
+
+U ovom poglavlju biće prikazani neki primeri napada na države i velike svetske gigante u poslednjih petnaest godina. Ovakvi napadi mogu biti izvršeni od strane pojedinca ili grupe ljudi i podjednako su bitni kao opomena za učenje na greškama. 
 
 \subsection{Primeri samostalnih napada}
 \label{subsec:primeri_samo_napada}
@@ -436,30 +371,30 @@ Iz svega priloženog, korišćenje Interenta bi trebalo da bude odgovorno. Videl
 \section{Dodatak}
 \label{sec:dodatak}
 Sada kad su objašnjeni glavni problemi na Internetu koji se tiču bezbednosti i kako do njih dolazi, postavlja se pitanje da li se oni mogu sprečiti i da li je bilo kakav vid zaštite moguć?
-U ovoj glavi biće prikazano na koje načine se možemo zastititi od najčešćih vrsti sajber napada koje su opisane u poglavlju \ref{sec:vrste_sajber_napada}.
+U ovoj glavi biće prikazano na koje načine se možemo zaštititi od najčešćih vrsta sajber napada koje su opisane u poglavlju \ref{sec:sajber_napadi_vrste}.
 
-\subsection{Zastita od fišinga}
+\subsection{Zaštita od fišinga}
 \label{subsec:zastita_od_fisinga}
-Fišing prevare su prisutne od samog početka Interneta, i one neće nestati u skorije vreme. Srećom, postoje načini kako da ne postanete žrtva istih. Neke osnovne smernice za zaštitu od fišinga su\cite{phishing_protect}:
+Fišing prevare su prisutne od samog početka Interneta i one neće nestati u skorije vreme. Srećom, postoje načini kako da ne postanete žrtva istih. Neke osnovne smernice za zaštitu od fišinga \cite{phishing_protect} su:
 
 \begin{enumerate}
-\item \textbf{Budite informisani o tehnikama fišinga.} Sve vreme se razvijaju novi načini za fišing prevare. Ukoliko niste upućeni u nove tehnike fišinga možete vrlo lako pasti na njih. Što pre saznate za njih, rizik da se tako nešto desi biće mnogo manji.
+\item \textbf{Budite informisani o tehnikama fišinga.} Sve vreme se razvijaju novi načini za fišing prevare. Ukoliko niste upućeni u nove tehnike fišinga, možete vrlo lako pasti na njih. Što pre saznate za njih, rizik da se tako nešto desi biće mnogo manji.
 
-\item \textbf{Razmislite pre nego što kliknete.} U redu je kliknuti na linkove na pouzdanim sajtovima. Ali ako kliknete na linkove koji se pojavljuju u nasumičnim mejlovima to i nije tako pametan potez. Pređite preko linkova za koje niste sigurni da su pouzdani pre nego što kliknete na njih i prikazaće vam se prava adresa linka.
+\item \textbf{Razmislite pre nego što kliknete.} U redu je kliknuti na linkove na pouzdanim sajtovima. Ali ako kliknete na linkove koji se pojavljuju u nasumičnim mejlovima, to i nije tako pametan potez. Pređite preko linkova za koje niste sigurni da su pouzdani pre nego što kliknete na njih i prikazaće vam se prava adresa linka.
 
-\item \textbf{Proverite sigurnost sajta.} Prirodno je biti oprezan kada je reč o ostavljanju poverljivih finansijskih informacija na mreži. Međutim, sve dok ste na bezbednom sajtu ne bi trebalo da naiđete na probleme. Pre nego što pošaljete bilo koju poverljivu informaciju uverite se da adresa sajta počinje sa ,,https‘‘\footnote{Bezbedna verzija protokola HTTP (eng. {\em Hyper Text Transfer Protocol}). ,,S‘‘ dolazi od \textit{secure} što nam govori da je komunikacija između pretraživača i veb sajta enkriptovana.} i da pored adrese postoji ikonica zaključanog katanca.
+\item \textbf{Proverite sigurnost sajta.} Prirodno je biti oprezan kada je reč o ostavljanju poverljivih finansijskih informacija na mreži. Međutim, sve dok ste na bezbednom sajtu ne bi trebalo da naiđete na probleme. Pre nego što pošaljete bilo koju poverljivu informaciju, uverite se da adresa sajta počinje sa ,,https‘‘\footnote{Bezbedna verzija protokola HTTP (eng. {\em Hyper Text Transfer Protocol}). ,,S‘‘ dolazi od \textit{secure} što nam govori da je komunikacija između pretraživača i veb sajta enkriptovana.} i da pored adrese postoji ikonica zaključanog katanca.
 
 \item \textbf{Instalirajte anti-fišing \textit{tulbar} (eng. {\em toolbar}) \footnote{Traka sa ikonicama koje su prečice do nekih softverskih alata.}.} Na ovaj način pokreću se brze provere lokacija koje posećujete i upoređuju se sa listama poznatih fišing lokacija. Ako naiđete na zlonamernu stranicu, bićete upozoreni.
 
-\item \textbf{Redovno proveravajte svoje naloge na Internetu.} Naviknite se da često menjate lozinke i proveravate mesečne izvestaje kako biste se uverili da nije došlo do transakcija bez vašeg znanja.
+\item \textbf{Redovno proveravajte svoje naloge na Internetu.} Naviknite se da često menjate lozinke i proveravate mesečne izveštaje kako biste se uverili da nije došlo do transakcija bez vašeg znanja.
 
 \item \textbf{Ažurirajte vaš pregledač.} Popularni pregledači izbacuju poboljšanja bezbednosti sve vreme.
 
-\item \textbf{Koristite zaštitne zidove (eng. {\em firewall})\footnote{Hardver ili softver koji u sklopu računarske mreže sprečava neželjeni prenos podataka preko mreže.}.} Kvalitetni zaštitni zidovi se ponašaju kao baferi između vas, vašeg kompjutera i osobe koja želi da upadne u vaš racunar. Trebalo bi koristiti dve vrste i to: lični zaštitni zid(eng. {\em personal firewall}) i mržni zaštitni zid (eng. {\em network firewall}). Prva opcija je vrsta softvera a druga vrsta hardvera. Kada se zajedno koriste drastično smanjuju šansu da do fišinga dođe.
+\item \textbf{Koristite zaštitne zidove (eng. {\em firewall})\footnote{Hardver ili softver koji u sklopu računarske mreže sprečava neželjeni prenos podataka preko mreže.}.} Kvalitetni zaštitni zidovi se ponašaju kao baferi između vas, vašeg kompjutera i osobe koja želi da upadne u vaš računar. Trebalo bi koristiti dve vrste i to: lični zaštitni zid(eng. {\em personal firewall}) i mrežni zaštitni zid (eng. {\em network firewall}). Prva opcija je vrsta softvera, a druga vrsta hardvera. Kada se zajedno koriste drastično smanjuju šansu da do fišinga dođe.
 
-\item \textbf{Budite oprezni sa iskačućim prozorima.} Često se maskiraju u legitimne komponente veb sajta a ustvari budu pokušaji fišinga. Mnogi popularni veb pregledači vam omogućavaju da ih blokirate.
+\item \textbf{Budite oprezni sa iskačućim prozorima.} Često se maskiraju u legitimne komponente veb sajta a u stvari budu pokušaji fišinga. Mnogi popularni veb pregledači vam omogućavaju da ih blokirate.
 
-\item \textbf{Nikada nemojte davati lične informacije.} Kao opšte pravilo, nikada ne bi trebalo da dajete lične i finansijski poverljive informacije putem Interneta. Kada ste u nedoumici posetite zvanični sajt kompanije, potražite njihov broj i nazovite ih. Nikada nemojte unositi poverljive informacije preko linkova koji se nalaze u mejlovima.
+\item \textbf{Nikada nemojte davati lične informacije.} Kao opšte pravilo, nikada ne bi trebalo da dajete lične i finansijski poverljive informacije putem Interneta. Kada ste u nedoumici, posetite zvanični sajt kompanije, potražite njihov broj telefona i nazovite ih. Nikada nemojte unositi poverljive informacije preko linkova koji se nalaze u mejlovima.
 
 \item \textbf{Koristite antivirusni program.} Antivirus skenira svaki fajl koji dolazi preko Interneta na vaš računar i pomaže u sprečavanju oštećenja vašeg sistema.
 
@@ -483,7 +418,7 @@ db.Execute(txtSQL,txtUserId);
 \subsection{Zaštita od DDoS napada}
 \label{subsec:zastita_od_ddosa}
 
-Evolucija DDoS napada ne pokazuje nikakve znakove usporavanja. Njihova snaga i učestalost stalno rastu, uključujući kombinovani ili hibridni pristup. Nemoguće ih je prepoznati bez ranog otkrivanja opasnosti i sistema za profilisanje saobraćaja\footnote{Sistem koji prikuplja i evaluira podatke veza na osnovu grafa koji se sastoji iz veza zasnovanih na mrežnom saobraćaju i kasnije može da detektuje neki abnormalan saobraćaj upoređivajući ga sa napravljenim profilom.}. U stvari, moguće je da se napad prepozna samo kada  sajt usporava ili se ruši. Ovo posebno važi sa sofisticirane napade koji koriste kombinovani pristup i ciljaju više nivoa istovremeno. Ovi napadi ciljaju podatke, aplikacije i infrastrukturu istovremeno kako bi povećali šanse za uspeh. Kako bi se odbranili od ovih napada potrebni su planovi ,,za bitku‘‘, kao i pouzdane prevencije od DDoS-a i rešenja za ublažavanje napada. Takođe, potrebna je integrisana bezbednosna strategija koja štiti sve nivoe infrastrukture. Šta sve treba uraditi kako bi se zaštitili od DDoS napada \cite{ddos_protect}:
+Evolucija DDoS napada ne pokazuje nikakve znakove usporavanja. Njihova snaga i učestalost stalno rastu, uključujući kombinovani ili hibridni pristup. Nemoguće ih je prepoznati bez ranog otkrivanja opasnosti i sistema za profilisanje saobraćaja\footnote{Sistem koji prikuplja i evaluira podatke veza na osnovu grafa koji se sastoji iz veza zasnovanih na mrežnom saobraćaju i kasnije može da detektuje neki abnormalan saobraćaj upoređivajući ga sa napravljenim profilom.}. U stvari, moguće je da se napad prepozna samo kada  sajt usporava ili se ruši. Ovo posebno važi sa sofisticirane napade koji koriste kombinovani pristup i ciljaju više nivoa istovremeno. Ovi napadi ciljaju podatke, aplikacije i infrastrukturu istovremeno kako bi povećali šanse za uspeh. Kako bi se odbranili od ovih napada, potrebni su planovi ,,za bitku‘‘, kao i pouzdane prevencije od DDoS-a i rešenja za ublažavanje napada. Takođe, potrebna je integrisana bezbednosna strategija koja štiti sve nivoe infrastrukture. Šta sve treba uraditi kako bismo se zaštitili od DDoS napada \cite{ddos_protect}:
 
 \begin{enumerate}
 
@@ -502,9 +437,9 @@ Većina standardne mrežne opreme dolazi sa ograničenim opcijama za ublažavanj
 
 \item \textbf{Održavati jaku arhitekturu mreže.} Fokusiranje na bezbednost arhitekture mreže je od vitalnog značaja za bezbednost. Firme bi trebalo da naprave suvišne mrežne resurse; ako je jedan server napadnut, ostali mogu da upravljaju dodatnim mrežnim saobraćajem. Ako je moguće, server treba locirati na različitim geografskim mestima. Tako rasipani resursi predstavljaju težu metu za napadača.
 
-\item \textbf{Iskoristiti \textit{cloud}.} Korišćenje \textit{cloud} usluga pruža dosta pogodnosti. \textit{Cloud} ima veći protok i vise resursa nego bilo koja privatna mreža. Kako se broj DDoS napada povećava, oslanjanje isključivo na lokalni hardver će verovatno propasti. Aplikacije zasnovane na \textit{cloud}-u mogu da priguše štetan ili zlonameran saobraćaj pre nego sto stigne do željene lokacije. Uslugama na \textit{cloud}-u upravljaju softver inženjeri čiji je posao da prate dešavanja na Vebu koja se tiču najnovijih DDoS taktika. Različite kompanije imaju različita okruženja za podatke i aplikacije. Hibridna okruženja mogu biti pogodna za postizanje prave ravnoteže između sigurnosti i fleksibilnosti, posebno za proizvođače koji nude rešenja ,,po meri‘‘.
+\item \textbf{Iskoristiti \textit{cloud}.} Korišćenje \textit{cloud} usluga pruža dosta pogodnosti. \textit{Cloud} ima veći protok i više resursa nego bilo koja privatna mreža. Kako se broj DDoS napada povećava, oslanjanje isključivo na lokalni hardver će verovatno propasti. Aplikacije zasnovane na \textit{cloud}-u mogu da priguše štetan ili zlonameran saobraćaj pre nego što stigne do željene lokacije. Uslugama na \textit{cloud}-u upravljaju softver inženjeri čiji je posao da prate dešavanja na vebu koja se tiču najnovijih DDoS taktika. Različite kompanije imaju različita okruženja za podatke i aplikacije. Hibridna okruženja mogu biti pogodna za postizanje prave ravnoteže između sigurnosti i fleksibilnosti, posebno za proizvođače koji nude rešenja ,,po meri‘‘.
 
-\item \textbf{Razumevanje znakova upozorenja.} Neki simptomi DDoS napada uključuju gašenje mreže, povezivanje na neku privatnu mrežu kompanije ili naizmenicno gašenje veb stranica. Nijedna mreža nije savršena, ali ukoliko se čini da je nedostatak performansi produžen ili ozbiljniji nego obično, na mrežu se verovatno izvršava DDoS napad i kompanija treba preduzeti mere. 
+\item \textbf{Razumevanje znakova upozorenja.} Neki simptomi DDoS napada uključuju gašenje mreže, povezivanje na neku privatnu mrežu kompanije ili naizmenično gašenje veb stranica. Nijedna mreža nije savršena, ali ukoliko se čini da je nedostatak performansi produžen ili ozbiljniji nego obično, na mrežu se verovatno izvršava DDoS napad i kompanija treba preduzeti mere. 
 
 \end{enumerate}
 
