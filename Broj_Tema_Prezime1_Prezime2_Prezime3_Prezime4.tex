@@ -1,6 +1,8 @@
 % !TEX encoding = UTF-8 Unicode
 \documentclass[a4paper]{article}
 
+\usepackage{appendix}
+
 \usepackage{color}
 \usepackage{url}
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
@@ -258,7 +260,7 @@ U mnogim zemljama, Internet odvija ključnu ulogu u svakodnevnom životu ljudi. 
 
 Fišing je vrsta društvenog inženjeringa (eng. {\em social engineering})\footnote{Obmana kojom se manipuliše ljudima da daju poverljive informacije.} gde se napadač pomoću elektronske pošte ili zlonamernih veb sajtova lažno predstavlja kao pouzdana organizacija ili kompanija kako bi prikupio lične podatke od pojedinca ili kompanije \cite{phishing_us_cert}. Engleski termin {\em  phishing} je prvi put koriščen 1996. a nazvan je po pecanju jer mejlovi služe kao mamac kojim se ljudi navode da daju svoje podatke. ,,Ph‘‘ umesto ,,f‘‘ u zapisu reči je aluzija na termin {\em phreaks} koji označava ljude koji su eksploatisali telekomunikacije, a neki ih smatraju i prvim hakerima \cite{phishing_org}.
 Napadi fišinga se često sastoje od slanja korisnicima mejlova koji izgledaju kao da su iz bankarske ili finansijske institucije ili veb servisa preko kojeg pojedinac ima račun. Cilj fišinga je da prevari primaoca da da svoje podatke za prijavljivanje ili druge osetljive informacije. 
-Na primer, napadač može da pošalje milione mejlova sa botnet-a\footnote{Mreža privatnih računara, zaraženih zlonamernim softverom, koji se kontrolišu kao grupa bez znanja vlasnika, npr. za slanje spama.}. Poruke obaveštavaju primaoce da je njihov nalog za elektronsku trgovinu bio kompromitovan i upućuju ih na veb lokaciju gde bi rešili problem. Korisnici koji kliknu na link dođu do veb stranice koja je napravljena tako da podseća na originalni sajt za elektronsku trgovinu. Kada se nađu na sajtu, od njih se traži korisničko ime, lozinka i druge privatne informacije. Te informacije mogu da se iskoriste za krađu identiteta. Jedni od glavnih načina zaštite od fišing napada su oprez i učenje kako se identifikuju sumnjivi imejlovi \cite{phishing_prevent}.
+Na primer, napadač može da pošalje milione mejlova sa botnet-a\footnote{Mreža privatnih računara, zaraženih zlonamernim softverom, koji se kontrolišu kao grupa bez znanja vlasnika, npr. za slanje spama.}. Poruke obaveštavaju primaoce da je njihov nalog za elektronsku trgovinu bio kompromitovan i upućuju ih na veb lokaciju gde bi rešili problem. Korisnici koji kliknu na link dođu do veb stranice koja je napravljena tako da podseća na originalni sajt za elektronsku trgovinu. Kada se nađu na sajtu, od njih se traži korisničko ime, lozinka i druge privatne informacije. Te informacije mogu da se iskoriste za krađu identiteta.
 
 Ciljano orijentisan fišing (eng. {\em spear phishing}) je varijanta fišinga u kojoj napadač bira adrese elektonske pošte tako da cilja jednog ili određenu grupu primalaca. Na primer, napadač može ciljati starije osobe kao osobe koje se smatraju lakovernijima ili članove grupa koji imaju pristup vrednim informacijama. Ciljano orijentisan fišing može biti veoma delotvoran jer omogućava napadaču da uobliči napad tako da žrtva zbog hitnosti ili poverenja određenim osobama bude manje oprezna. Za ovo je potrebno da napadač prikupi lične podatke o žrtvi, kao što su imena prijatelja, poslodavac, rodni grad, lokacije koje posećuje, šta je nedavno kupila na mreži itd.
 Na primer, napadač može da pošalje mejl ka nekoliko ljudi koji izgleda kao da je od njihovog direktora, kojim ih poziva na sastanak putem Gmail-a, a link u poruci navodi primaoce da se prijave na Gmail da prisustvuju sastanku. 
@@ -440,5 +442,38 @@ Iz svega priloženog, korišćenje Interenta bi trebalo da bude odgovorno. Videl
 \raggedright
 \bibliography{seminarski} 
 \bibliographystyle{plain}
+
+
+\appendix
+\section{Dodatak}
+\label{sec:dodatak}
+U ovoj glavi biće prikazano na koji način se možemo zastititi od najčešćih vrsti sajber napada koje su opisane u poglavlju \ref{sec:vrste_sajber_napada}.
+
+\subsection{Zastita od fišinga}
+\label{subsec:zastita_od_fisinga}
+Fišing prevare su prisutne od samog početka Interneta, i one neće nestati u skorije vreme. Srećom, postoje načini kako da ne postanete žrtva istih. Neke osnovne smernice za zaštitu od fišinga su\cite{phishing_protect}:
+
+\begin{enumerate}
+\item Budite informisani o tehnikama fišinga - Sve vreme se razvijaju novi načini za fišing prevare. Bez da ostanete upućeni u nove tehnike fišinga možete vrlo lako pasti na njih. Što pre saznate za njih, rizik da se tako nešto desi biće mnogo manji.
+
+\item Razmislite pre nego što kliknete - U redu je kliknuti na linkove na pouzdanim sajtovima. Ali ako kliknete na linkove koji se pojavljuju u nasumičnim mejlovima to i nije tako pametan potez. Pređite preko linkova za koje niste sigurni da su pouzdani pre nego što kliknete na njih i prikazaće vam se prava adresa linka.
+
+\item Proverite sigurnost sajta - Prirodno je biti oprezan kada je reč o ostavljanju poverljivih finansijskih informacija na mreži. Međutim, sve dok ste na bezbednom sajtu ne bi trebalo da naiđete na probleme. Pre nego što pošaljete bilo koju poverljivu informaciju uverite se da adresa sajta počinje sa ,,https‘‘\footnote{Bezbedna verzija protokola HTTP (Hyper Text Transfer Protocol). ,,S‘‘ dolazi od \textit{secure} što nam govori da je komunikacija između pretraživača i veb sajta enkriptovana.} i da pored adrese postoji ikonica zaključanog katanca.
+
+\item Instalirajte anti-fišing \textit{tulbar} (eng. {\em toolbar}) \footnote{Traka sa ikonicama koje su prečice do nekih softverskih alata.} - Na ovaj način pokreću se brze provere lokacija koje posećujete i upoređuju se sa listama poznatih fišing lokacija. Ako naiđete na zlonamernu stranicu, bićete upozoreni.
+
+\item Redovno proveravajte svoje naloge na Internetu - Naviknite se da često menjate lozinke i proveravate mesečne izvestaje kako biste se uverili da nije došlo do transakcija bez vašeg znanja.
+
+\item Ažurirajte vas pregledač - Popularni pregledači izbacuju poboljšanja bezbednosti sve vreme.
+
+\item Koristite zaštitne zidove (eng. {\em firewall})\footnote{Hardver ili softver koji u sklopu računarske mreže sprečava neželjeni prenos podataka preko mreže.} - Kvalitetni zaštitni zidovi se ponašaju kao baferi između vas, vašeg kompjutera i osobe koja želi da upadne u vaš racunar. Trebalo bi koristiti dve vrste i to: lični zaštitni zid(eng. {\em personal firewall}) i mržni zaštitni zid (eng. {\em network firewall}). Prva opcija je vrsta softvera a druga vrsta hardvera. Kada se zajedno koriste drastično smanjuju šansu da do fišinga dođe.
+
+\item Budite oprezni sa iskačućim prozorima - Često se maskiraju u legitimne komponente veb sajta a ustvari budu pokušaji fišinga. Mnogi popularni veb pregledači vam omogućavaju da ih blokirate.
+
+\item Nikada nemojte davati lične informacije - Kao opšte pravilo, nikada ne bi trebalo da dajete lične i finansijski poverljive informacije putem Interneta. Kada ste u nedoumici posetite zvanični sajt kompanije, potražite njihov broj i nazovite ih. Nikada nemojte unositi poverljive informacije preko linkova koji se nalaze u mejlovima.
+
+\item Koristite antivirusni program - Antivirus skenira svaki fajl koji dolazi preko Interneta na vaš računar i pomaže u sprečavanju oštećenja vašeg sistema.
+
+\end{enumerate}
 
 \end{document}
