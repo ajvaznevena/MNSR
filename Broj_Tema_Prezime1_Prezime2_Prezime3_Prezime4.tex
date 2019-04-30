@@ -21,7 +21,7 @@
 %\newtheorem{primer}{Пример}[section] %ćirilični primer
 \usepackage{ntheorem}
 \theoremstyle{break}
-\newtheorem{primer}{Primer}[section]
+\newtheorem{primer}{Primer}[subsection]
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -260,18 +260,6 @@ Mnoge baze podržavaju grupu SQL upita razdvojenih ; simbolom. Ukoliko bi korisn
 \begin{lstlisting}[frame=single]
 SELECT * FROM Users WHERE UserId = 105; DROP TABLE Suppliers; 
 \end{lstlisting}
-\paragraph{}
-Zaštita od ovakvih napada je moguća korišćenjem SQL parametara. To su vredosti koje su dodate SQL upitu u vreme izvršavanja na kontrolisan način.
-
-\begin{primer}
-\label{primer_3}
-\begin{lstlisting}[frame=single]
-txtUserId = getRequestString("UserId");
-txtSQL = "SELECT * FROM Users WHERE UserId = @0";
-db.Execute(txtSQL,txtUserId);
-\end{lstlisting}
-\end{primer}
-\noindent Primer \ref{primer_3} je deo koda u ASP.NET-u u kome se koriste parametri. Parametri su predstavljeni znakom @. SQL mehanizam proverava parametre kako bi se uverio da su ispravni i da se tretiraju bukvalno a ne kao deo SQL-a koji se izvršava.
 
 \subsection{DoS napadi}
 \label{subsec:DoS}
@@ -455,27 +443,42 @@ U ovoj glavi biće prikazano na koje načine se možemo zastititi od najčešći
 Fišing prevare su prisutne od samog početka Interneta, i one neće nestati u skorije vreme. Srećom, postoje načini kako da ne postanete žrtva istih. Neke osnovne smernice za zaštitu od fišinga su\cite{phishing_protect}:
 
 \begin{enumerate}
-\item Budite informisani o tehnikama fišinga - Sve vreme se razvijaju novi načini za fišing prevare. Bez da ostanete upućeni u nove tehnike fišinga možete vrlo lako pasti na njih. Što pre saznate za njih, rizik da se tako nešto desi biće mnogo manji.
+\item \textbf{Budite informisani o tehnikama fišinga.} Sve vreme se razvijaju novi načini za fišing prevare. Ukoliko niste upućeni u nove tehnike fišinga možete vrlo lako pasti na njih. Što pre saznate za njih, rizik da se tako nešto desi biće mnogo manji.
 
-\item Razmislite pre nego što kliknete - U redu je kliknuti na linkove na pouzdanim sajtovima. Ali ako kliknete na linkove koji se pojavljuju u nasumičnim mejlovima to i nije tako pametan potez. Pređite preko linkova za koje niste sigurni da su pouzdani pre nego što kliknete na njih i prikazaće vam se prava adresa linka.
+\item \textbf{Razmislite pre nego što kliknete.} U redu je kliknuti na linkove na pouzdanim sajtovima. Ali ako kliknete na linkove koji se pojavljuju u nasumičnim mejlovima to i nije tako pametan potez. Pređite preko linkova za koje niste sigurni da su pouzdani pre nego što kliknete na njih i prikazaće vam se prava adresa linka.
 
-\item Proverite sigurnost sajta - Prirodno je biti oprezan kada je reč o ostavljanju poverljivih finansijskih informacija na mreži. Međutim, sve dok ste na bezbednom sajtu ne bi trebalo da naiđete na probleme. Pre nego što pošaljete bilo koju poverljivu informaciju uverite se da adresa sajta počinje sa ,,https‘‘\footnote{Bezbedna verzija protokola HTTP (Hyper Text Transfer Protocol). ,,S‘‘ dolazi od \textit{secure} što nam govori da je komunikacija između pretraživača i veb sajta enkriptovana.} i da pored adrese postoji ikonica zaključanog katanca.
+\item \textbf{Proverite sigurnost sajta.} Prirodno je biti oprezan kada je reč o ostavljanju poverljivih finansijskih informacija na mreži. Međutim, sve dok ste na bezbednom sajtu ne bi trebalo da naiđete na probleme. Pre nego što pošaljete bilo koju poverljivu informaciju uverite se da adresa sajta počinje sa ,,https‘‘\footnote{Bezbedna verzija protokola HTTP (eng. {\em Hyper Text Transfer Protocol}). ,,S‘‘ dolazi od \textit{secure} što nam govori da je komunikacija između pretraživača i veb sajta enkriptovana.} i da pored adrese postoji ikonica zaključanog katanca.
 
-\item Instalirajte anti-fišing \textit{tulbar} (eng. {\em toolbar}) \footnote{Traka sa ikonicama koje su prečice do nekih softverskih alata.} - Na ovaj način pokreću se brze provere lokacija koje posećujete i upoređuju se sa listama poznatih fišing lokacija. Ako naiđete na zlonamernu stranicu, bićete upozoreni.
+\item \textbf{Instalirajte anti-fišing \textit{tulbar} (eng. {\em toolbar}) \footnote{Traka sa ikonicama koje su prečice do nekih softverskih alata.}.} Na ovaj način pokreću se brze provere lokacija koje posećujete i upoređuju se sa listama poznatih fišing lokacija. Ako naiđete na zlonamernu stranicu, bićete upozoreni.
 
-\item Redovno proveravajte svoje naloge na Internetu - Naviknite se da često menjate lozinke i proveravate mesečne izvestaje kako biste se uverili da nije došlo do transakcija bez vašeg znanja.
+\item \textbf{Redovno proveravajte svoje naloge na Internetu.} Naviknite se da često menjate lozinke i proveravate mesečne izvestaje kako biste se uverili da nije došlo do transakcija bez vašeg znanja.
 
-\item Ažurirajte vas pregledač - Popularni pregledači izbacuju poboljšanja bezbednosti sve vreme.
+\item \textbf{Ažurirajte vaš pregledač.} Popularni pregledači izbacuju poboljšanja bezbednosti sve vreme.
 
-\item Koristite zaštitne zidove (eng. {\em firewall})\footnote{Hardver ili softver koji u sklopu računarske mreže sprečava neželjeni prenos podataka preko mreže.} - Kvalitetni zaštitni zidovi se ponašaju kao baferi između vas, vašeg kompjutera i osobe koja želi da upadne u vaš racunar. Trebalo bi koristiti dve vrste i to: lični zaštitni zid(eng. {\em personal firewall}) i mržni zaštitni zid (eng. {\em network firewall}). Prva opcija je vrsta softvera a druga vrsta hardvera. Kada se zajedno koriste drastično smanjuju šansu da do fišinga dođe.
+\item \textbf{Koristite zaštitne zidove (eng. {\em firewall})\footnote{Hardver ili softver koji u sklopu računarske mreže sprečava neželjeni prenos podataka preko mreže.}.} Kvalitetni zaštitni zidovi se ponašaju kao baferi između vas, vašeg kompjutera i osobe koja želi da upadne u vaš racunar. Trebalo bi koristiti dve vrste i to: lični zaštitni zid(eng. {\em personal firewall}) i mržni zaštitni zid (eng. {\em network firewall}). Prva opcija je vrsta softvera a druga vrsta hardvera. Kada se zajedno koriste drastično smanjuju šansu da do fišinga dođe.
 
-\item Budite oprezni sa iskačućim prozorima - Često se maskiraju u legitimne komponente veb sajta a ustvari budu pokušaji fišinga. Mnogi popularni veb pregledači vam omogućavaju da ih blokirate.
+\item \textbf{Budite oprezni sa iskačućim prozorima.} Često se maskiraju u legitimne komponente veb sajta a ustvari budu pokušaji fišinga. Mnogi popularni veb pregledači vam omogućavaju da ih blokirate.
 
-\item Nikada nemojte davati lične informacije - Kao opšte pravilo, nikada ne bi trebalo da dajete lične i finansijski poverljive informacije putem Interneta. Kada ste u nedoumici posetite zvanični sajt kompanije, potražite njihov broj i nazovite ih. Nikada nemojte unositi poverljive informacije preko linkova koji se nalaze u mejlovima.
+\item \textbf{Nikada nemojte davati lične informacije.} Kao opšte pravilo, nikada ne bi trebalo da dajete lične i finansijski poverljive informacije putem Interneta. Kada ste u nedoumici posetite zvanični sajt kompanije, potražite njihov broj i nazovite ih. Nikada nemojte unositi poverljive informacije preko linkova koji se nalaze u mejlovima.
 
-\item Koristite antivirusni program - Antivirus skenira svaki fajl koji dolazi preko Interneta na vaš računar i pomaže u sprečavanju oštećenja vašeg sistema.
+\item \textbf{Koristite antivirusni program.} Antivirus skenira svaki fajl koji dolazi preko Interneta na vaš računar i pomaže u sprečavanju oštećenja vašeg sistema.
 
 \end{enumerate}
+
+\subsection{Zaštita od SQL injekcije}
+\label{subsec:zastita_od_sql_injekcije}
+
+U poglavlju \ref{subsec:sql} videli smo na koje sve načine možemo biti izloženi SQL injekciji. Zaštita od ovakvih napada je moguća korišćenjem SQL parametara. To su vredosti koje su dodate SQL upitu u vreme izvršavanja na kontrolisan način.
+
+\begin{primer}
+\label{primer_3}
+\begin{lstlisting}[frame=single]
+txtUserId = getRequestString("UserId");
+txtSQL = "SELECT * FROM Users WHERE UserId = @0";
+db.Execute(txtSQL,txtUserId);
+\end{lstlisting}
+\end{primer}
+\noindent Primer \ref{primer_3} je deo koda u ASP.NET-u u kome se koriste parametri. Parametri su predstavljeni znakom @. SQL mehanizam proverava parametre kako bi se uverio da su ispravni i da se tretiraju bukvalno a ne kao deo SQL-a koji se izvršava \cite{sql_injection}.
 
 \subsection{Zaštita od DDoS napada}
 \label{subsec:zastita_od_ddosa}
