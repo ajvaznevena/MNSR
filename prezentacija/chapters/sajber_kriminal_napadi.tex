@@ -1,0 +1,159 @@
+\section{Sajber kriminal i napadi}
+
+\begin{frame}{Pojam sajber kriminala}
+        
+        %\noindent\begin{minipage}{0.6\linewidth}
+        \begin{itemize}
+        	\item \textit{def.} Visokotehnološki ili sajber kriminal (eng. cyber crime) predstavlja moderni vid kriminala, tj. putem mreže kako bi se izvele zlonamerne aktivnosti
+            
+			\item cilj je krađa osetljivih podataka neke firme, lične informacije ili profit
+            
+        \end{itemize}
+    \end{frame}
+    
+    
+   \begin{frame}{Zakon u Srbiji}
+    \begin{itemize}
+    \item globalni indeks sajber bezbednosti (eng. GCI) - pouzdan izvor koji meri posvećenost država bezbednosti na Internetu 
+    \item Srbija je zemlja sa niskom stopom posvećenosti suzbijanju sajber kriminala
+    \end{itemize}
+	\begin{minipage}{0.3\textwidth}
+        \includegraphics[scale = 0.25]{itu_worldmap.jpg}
+        \end{minipage}
+        \begin{minipage}{0.6\textwidth}\raggedleft
+        Tamnozelena-najviše posvećen\\
+        crvena-najmaje posvećen\\
+        \end{minipage}
+        %\noindent
+    \end{frame}
+    
+    \begin{frame}{Sajber napadi i vrste}
+    \begin{itemize}
+	\item \textit{def.} Sajber napad - napad od računara do računara koji povređuje poverljivost, integritet i informacije koje se nalaze na napadnutom računaru  
+	\item sa porastom popularnosti Interneta porasla je i stopa kriminala na njemu
+	\item najčešće vrste napada
+	\begin{itemize}
+	\item Fišing (eng. phishing)
+	\item SQL injekcija
+	\item DoS napadi
+\end{itemize}	  
+    \end{itemize}
+    \end{frame}
+    
+    %\frame{\sectionpage}
+    
+    \begin{frame}{Fišing (eng. \textit{phishing})}
+        
+        \noindent\begin{minipage}{0.55\linewidth}
+            \begin{itemize}
+                \item lažno predstavljanje pomoću elektronske pošte ili zlonamernih veb sajtova kako bi se prikupili lični podaci
+                \item termin phishing: phreaks + fishing
+                \item mejlovi obaveštavaju primaoce da je njihov nalog kompromitovan
+                \item ciljano orijentisan fising \\(eng. spear phishing)
+            \end{itemize}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.4\linewidth}
+            \centering
+            \includegraphics[scale = 0.3]{images/phishing1.jpeg}
+            \vspace{0.5cm}
+            \includegraphics[scale = 0.3]{images/spear_phishing_transparent.png}
+        \end{minipage}
+        %\includegraphics[scale = 0.3]{spear_phishing_transparent.png}
+    \end{frame}
+    
+    \begin{frame}{Fišing (eng. \textit{phishing})}
+        \begin{minipage}{0.6\textwidth}
+        \begin{itemize}
+                \item fišing se pojavio negde oko 1995. (AOL)
+                \item 2000ih godina su napadi prešli na platne sisteme (E-Gold, eBay i PayPal)
+            \end{itemize}
+        \end{minipage}
+        \begin{minipage}[t]{0.3\linewidth}
+            \centering
+            \includegraphics[scale = 0.045]{images/aol_logo.jpg}
+            \hspace{0.1cm}
+            \includegraphics[scale = 0.05]{images/PayPal_eBay.jpg}
+        \end{minipage}
+        
+        \begin{minipage}{\textwidth}
+            \centering
+            \vspace{0.3cm}
+            \includegraphics[width=0.7\textwidth, height = 5cm]{images/phishing.png}
+        \end{minipage}
+        \begin{minipage}{\textwidth}
+            \centering
+            \textit{broj sajtova za fišing koje je APWG otkrio tokom godina}
+        \end{minipage}
+    \end{frame}
+
+\begin{frame}{SQL injekcija}
+        
+        %\noindent\begin{minipage}{0.6\linewidth}
+            \begin{itemize}
+                \item umetanje dela ili celog SQL upita obično preko polja za unos na veb stranici. 
+                \item Načini upotrebe SQL injekcije:
+                		\begin{itemize}
+                		\item \texttt{1=1} je uvek istinito
+                		        \includegraphics[width=\linewidth]{sql11111.png}
+                		\item \texttt{"}\texttt{"}=\texttt{"}\texttt{"} je uvek istinito
+                		        \includegraphics[width=\linewidth]{sql22222.png}                		        
+                		\item grupa SQL upita razdvojenih ; simbolom
+                		        \includegraphics[width=\linewidth]{sql33333.png}
+                		\end{itemize}
+                	\item zaštita od ovakvih napada je moguća korišćenjem SQL parametara
+            \end{itemize}
+    \end{frame}
+
+
+\begin{frame}{DoS napadi (eng. \textit{Denial-of-Service})}
+
+	\begin{itemize}
+
+		\item Napadač - ometa usluge servera i čini ga nedostupnim svojim korisnicima
+		\item Asimetričan napad - jedna osoba može dosta da naškodi velikoj organizaciji
+		\item Cilj - remećenje sposobnosti servera, a ne krađa informacija
+		\item Dodatni tip DDoS (eng. \textit{Distributed Denial-of-Service}) - meta je napadnuta sa više lokacija odjednom
+		\item Zaštita - razviti plan odgovora na napad, osigurati mrežnu infrastrukturu, održavati jaku arhitekturu mreže, razumeti znakove upozorenja
+
+	\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Primeri napada}
+    \begin{itemize}
+
+    \item samostalni napadi
+    	\begin{itemize}
+    		\item Dženson Džejms Ančeta
+    		\item PharmaMaster
+    	\end{itemize}
+    
+    \item napadi na države
+    	\begin{itemize}
+    		\item Gruzija
+    		\item SAD i Južna Koreja
+    	\end{itemize}
+    	
+    \item napadi na kompanije
+    	\begin{itemize}
+    		\item Yahoo!
+    		\item eBay
+    	\end{itemize}
+    
+    \end{itemize}
+    \end{frame}
+    
+
+\begin{frame}{Sajber kriminal}
+
+	\begin{itemize}
+		
+		\item Zlonameran k\^{o}d (eng. \textit{malware}) - glavno sredstvo za trgovinu informacijama i infiltriranje u sisteme
+		\item Napadači - jako pažljivi i prikrivaju svoje tragove
+		\item Botnet-ovi - podstiču rast sajber napada i dozvoljavaju napadaču da kontroliše neki sistem širom Interneta
+		
+	\end{itemize}
+
+\end{frame}

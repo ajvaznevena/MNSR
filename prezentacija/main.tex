@@ -1,0 +1,43 @@
+\documentclass[aspectratio=43]{beamer}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\input{chapters/preamble}
+\title{Da li ste bezbedni na Internetu?} %->->->->-> Check hyperref title <-<-<-<-<-
+\author[Ajvaz, Jovanović, Milićević, Nikčević]{Nevena Ajvaz, Natalija Jovanović, Marija Milićević, Tijana Nikčević}
+\institute[MatF]{
+    Matematički fakultet,%
+    \\%
+    Univerzitet u Beogradu%
+} %You can change the Institution if you are from somewhere else
+\date{15. maj 2019.}
+%\logo{\includegraphics[width= 0.2\textwidth]{images/a-logo.png}}
+\graphicspath{ {./images/} }
+
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+\begin{document}
+    
+    \frame{\titlepage}    
+    \begin{frame}{Sadržaj}
+        \tableofcontents
+    \end{frame}
+    
+    \input{chapters/sajber_kriminal_napadi.tex}
+    
+    \input{chapters/glasanje_putem_interneta.tex}
+    
+    \section{Literatura}
+    \begin{frame}{Literatura}
+
+	\end{frame}
+
+    \section{}
+    \begin{frame}{}
+        \centering
+            \Huge\bfseries
+        \textcolor{orange}{Hvala na pažnji!\\ Pitanja?}
+    \end{frame}
+\end{document}
